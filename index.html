@@ -3,40 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DJ DAMELO - Artiste Producteur</title>
+  <title>DJ DAMELO - Artiste Producteur Officiel</title>
   <style>
-    body { background: linear-gradient(180deg, #FF8C00, #32CD32); color: white; font-family: Arial; text-align: center; padding: 20px; }
-    .card { background: white; color: black; border-radius: 15px; padding: 15px; margin: 15px auto; max-width: 400px; }
-    audio { width: 100%; }
-    img { border-radius: 50%; width: 150px; border: 4px solid white; }
-    .btn { background: linear-gradient(90deg, #00FF00, #FFD700); padding: 12px; border-radius: 25px; border: none; font-weight: bold; width: 100%; margin-top: 10px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      background: linear-gradient(180deg, #FF8C00, #FFD700, #32CD32); 
+      color: white; 
+      font-family: 'Arial', sans-serif; 
+      text-align: center; 
+      padding: 20px 15px; 
+    }
+    .container { max-width: 500px; margin: 0 auto; }
+    h1 { font-size: 36px; margin-bottom: 5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+    .subtitle { font-size: 15px; margin-bottom: 20px; opacity: 0.9; }
+    .profile-img { 
+      border-radius: 50%; 
+      width: 170px; 
+      height: 170px;
+      object-fit: cover;
+      border: 5px solid white; 
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .bio { 
+      background: rgba(255,255,255,0.15); 
+      padding: 15px; 
+      border-radius: 15px; 
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    h2 { margin: 25px 0 15px 0; font-size: 24px; }
+    .card { 
+      background: white; 
+      color: black; 
+      border-radius: 20px; 
+      padding: 20px; 
+      margin: 15px 0; 
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .card h3 { margin-bottom: 12px; font-size: 17px; }
+    audio { width: 100%; margin: 10px 0; border-radius: 10px; }
+    .btn { 
+      background: linear-gradient(90deg, #00FF00, #FFD700); 
+      color: black;
+      padding: 14px; 
+      border-radius: 30px; 
+      border: none; 
+      font-weight: bold; 
+      font-size: 15px;
+      width: 100%; 
+      margin-top: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* TES RÉSEAUX */
+    .social-links {
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 12px; 
+      margin: 30px 0;
+    }
+    .social-links a {
+      background: white;
+      color: black;
+      padding: 10px 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    .social-links a:active { transform: scale(0.95); }
+    
+    .contact {
+      margin-top: 30px;
+      background: rgba(0,0,0,0.2);
+      padding: 15px;
+      border-radius: 15px;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <h1>DJ DAMELO</h1>
-  <p>Artiste - Producteur - DJ 🇹🇬</p>
-  <img src="photo.jpg" alt="DJ Damelo">
+    <h1>DJ DAMELO</h1>
+    <p class="subtitle">Artiste - Producteur - DJ Officiel 🇹🇬</p>
+    
+    <img src="photo.jpg" alt="DJ Damelo" class="profile-img">
 
-  <h2>🔥 Mes Sons</h2>
+    <div class="bio">
+      <p>Bienvenue sur mon site officiel !<br>
+      Découvrez mes sons, suivez mon actualité et soutenez-moi avec Pi Network 🔥</p>
+    </div>
 
-  <div class="card">
-    <h3>1. Riche ou Pauvre</h3>
-    <audio controls>
-      <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
-      Ton navigateur ne supporte pas l'audio.
-    </audio>
-    <button class="btn">Télécharger pour 1 Pi</button>
+    <h2>🎵 Mes Derniers Sons</h2>
+
+    <div class="card">
+      <h3>1. Riche ou Pauvre</h3>
+      <audio controls preload="auto">
+        <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
+      </audio>
+      <a href="riche-ou-pauvre.mp3" download class="btn">Télécharger pour 1 Pi</a>
+    </div>
+
+    <div class="card">
+      <h3>2. Petit Damelo - Coupe Décalé</h3>
+      <audio controls preload="auto">
+        <source src="petit-damelo.mp3" type="audio/mpeg">
+      </audio>
+      <a href="petit-damelo.mp3" download class="btn">Télécharger pour 1 Pi</a>
+    </div>
+
+    <h2>📱 Suivez-moi partout</h2>
+    <div class="social-links">
+      <a href="https://youtube.com/@dj-damelo?si=FNKO22RfBB6CczMn" target="_blank">▶️ YouTube</a>
+      <a href="https://open.spotify.com/user/31gwxocjetwo6psikmpge57cmpw4?si=GTRme8q6QWev1idi1k_w5A" target="_blank">🎵 Spotify</a>
+      <a href="https://on.soundcloud.com/J9QWLMdqzJxhputfo5" target="_blank">☁️ SoundCloud</a>
+      <a href="https://www.boomplay.com/shareUser/113931343?share_platform=an&srList=ANDROID&srModel=byWH&share_channel=whatsapp&share_content=user" target="_blank">💿 Boomplay</a>
+      <a href="https://vm.tiktok.com/ZS96T3CcfbdEE-ym6vk/" target="_blank">♪ TikTok</a>
+      <a href="https://www.instagram.com/dj_damelo?igsh=a2Zzejd4b2xpYjZz" target="_blank">📷 Insta</a>
+      <a href="https://www.facebook.com/share/18yyeS1TaS/" target="_blank">f Facebook</a>
+      <a href="https://x.com/Dj_Damelo" target="_blank">𝕏 X</a>
+      <a href="https://rapfame.app/user/dj_damelo" target="_blank">🎤 Rapfame</a>
+      <a href="https://t.me/+233242668880" target="_blank">💬 Telegram</a>
+      <a href="https://www.linkedin.com/in/bro-elisha-768b38231?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">💼 LinkedIn</a>
+      <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank">📍 Google</a>
+    </div>
+
+    <div class="contact">
+      <h2>📞 Contact / Booking</h2>
+      <p>WhatsApp: +228 XX</p>
+      <p>Email: djdamelo@gmail.com</p>
+    </div>
+
   </div>
-
-  <div class="card">
-    <h3>2. Petit Damelo - Coupe Décalé</h3>
-    <audio controls>
-      <source src="petit-damelo.mp3" type="audio/mpeg">
-      Ton navigateur ne supporte pas l'audio.
-    </audio>
-    <button class="btn">Télécharger pour 1 Pi</button>
-  </div>
-
 </body>
 </html>
