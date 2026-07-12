@@ -43,6 +43,7 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     }
     .card h3 { margin-bottom: 12px; font-size: 17px; }
+    .card p { font-size: 12px; color: #555; margin-bottom: 10px; }
     audio { width: 100%; margin: 10px 0; border-radius: 10px; }
     .btn { 
       background: linear-gradient(90deg, #00FF00, #FFD700); 
@@ -56,7 +57,6 @@
       margin-top: 10px;
       cursor: pointer;
     }
-    .btn:disabled { background: #ccc; cursor: not-allowed; }
     .social-links {
       display: flex; 
       flex-wrap: wrap; 
@@ -87,19 +87,19 @@
   <div class="container">
 
     <h1>DJ DAMELO</h1>
-    <p class="subtitle">Artiste - Producteur - DJ Officiel 🇹🇬🇭</p>
+    <p class="subtitle">Artiste - Producteur - DJ Officiel 🇹🇬🇬🇭</p>
     
     <img src="photo.jpg" alt="DJ Damelo" class="profile-img">
 
     <div class="bio">
-      <p>Bienvenue ! Soutenez mon travail.<br>
-      1 Son = 1 Pi. Paiement sécurisé via Pi Network 🔥</p>
+      <p>Écoutez gratuitement. Soutenez avec 1 Pi pour télécharger en HQ 🔥</p>
     </div>
 
     <h2>🎵 Mes Derniers Sons</h2>
 
     <div class="card">
       <h3>1. Riche ou Pauvre</h3>
+      <p>Écoute gratuite - Téléchargement: 1 Pi</p>
       <audio controls preload="auto">
         <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
       </audio>
@@ -108,6 +108,7 @@
 
     <div class="card">
       <h3>2. Petit Damelo - Coupe Décalé</h3>
+      <p>Écoute gratuite - Téléchargement: 1 Pi</p>
       <audio controls preload="auto">
         <source src="petit-damelo.mp3" type="audio/mpeg">
       </audio>
@@ -134,7 +135,7 @@
       <h2>📞 Contact / Booking</h2>
       <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank">+233 24 266 8880</a></p>
       <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank">+228 96 27 58 73</a></p>
-      <p>Email: djdamelo@gmail.com</p>
+      <p>Email: dj.damelo.music@gmail.com</p>
     </div>
 
   </div>
@@ -159,11 +160,11 @@
         // LANCER LE TÉLÉCHARGEMENT AUTOMATIQUE
         let link = document.createElement('a');
         link.href = fichier;
-        link.download = fichier;
+        link.download = nomSon + ".mp3";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        alert("Merci pour votre soutien ! Téléchargement de '" + nomSon + "' lancé 🙏");
+        alert("Merci pour votre soutien ! '" + nomSon + "' téléchargé 🙏");
       },
       onCancel: function(paymentId) {
         alert("Paiement annulé.");
