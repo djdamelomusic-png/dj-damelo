@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO - Artiste Producteur Officiel</title>
+  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
@@ -54,11 +55,8 @@
       width: 100%; 
       margin-top: 10px;
       cursor: pointer;
-      text-decoration: none;
-      display: block;
     }
-    
-    /* TES RÉSEAUX */
+    .btn:disabled { background: #ccc; cursor: not-allowed; }
     .social-links {
       display: flex; 
       flex-wrap: wrap; 
@@ -76,27 +74,26 @@
       font-size: 13px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
-    .social-links a:active { transform: scale(0.95); }
-    
     .contact {
       margin-top: 30px;
       background: rgba(0,0,0,0.2);
       padding: 15px;
       border-radius: 15px;
     }
+    .contact a { color: #FFD700; text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
   <div class="container">
 
     <h1>DJ DAMELO</h1>
-    <p class="subtitle">Artiste - Producteur - DJ Officiel 🇹🇬</p>
+    <p class="subtitle">Artiste - Producteur - DJ Officiel 🇹🇬🇭</p>
     
     <img src="photo.jpg" alt="DJ Damelo" class="profile-img">
 
     <div class="bio">
-      <p>Bienvenue sur mon site officiel !<br>
-      Découvrez mes sons, suivez mon actualité et soutenez-moi avec Pi Network 🔥</p>
+      <p>Bienvenue ! Soutenez mon travail.<br>
+      1 Son = 1 Pi. Paiement sécurisé via Pi Network 🔥</p>
     </div>
 
     <h2>🎵 Mes Derniers Sons</h2>
@@ -106,7 +103,7 @@
       <audio controls preload="auto">
         <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
       </audio>
-      <a href="riche-ou-pauvre.mp3" download class="btn">Télécharger pour 1 Pi</a>
+      <button onclick="payerEtTelecharger('riche-ou-pauvre.mp3', 'Riche ou Pauvre')" class="btn">Télécharger pour 1 Pi</button>
     </div>
 
     <div class="card">
@@ -114,7 +111,7 @@
       <audio controls preload="auto">
         <source src="petit-damelo.mp3" type="audio/mpeg">
       </audio>
-      <a href="petit-damelo.mp3" download class="btn">Télécharger pour 1 Pi</a>
+      <button onclick="payerEtTelecharger('petit-damelo.mp3', 'Petit Damelo')" class="btn">Télécharger pour 1 Pi</button>
     </div>
 
     <h2>📱 Suivez-moi partout</h2>
@@ -135,10 +132,50 @@
 
     <div class="contact">
       <h2>📞 Contact / Booking</h2>
-      <p>WhatsApp: +228 XX</p>
+      <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank">+233 24 266 8880</a></p>
+      <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank">+228 96 27 58 73</a></p>
       <p>Email: djdamelo@gmail.com</p>
     </div>
 
   </div>
+
+<script>
+  // INITIALISER PI SDK
+  Pi.init({ version: "2.0", sandbox: true }); // METTRE sandbox: false quand tu es en prod
+
+  async function payerEtTelecharger(fichier, nomSon) {
+    const paymentData = {
+      amount: 1,
+      memo: "Achat: " + nomSon + " - DJ DAMELO",
+      metadata: { son: nomSon }
+    };
+
+    const callbacks = {
+      onReadyForServerApproval: function(paymentId) {
+        console.log("Paiement prêt:", paymentId);
+      },
+      onReadyForServerCompletion: function(paymentId, txid) {
+        console.log("Paiement complété:", txid);
+        // LANCER LE TÉLÉCHARGEMENT AUTOMATIQUE
+        let link = document.createElement('a');
+        link.href = fichier;
+        link.download = fichier;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        alert("Merci pour votre soutien ! Téléchargement de '" + nomSon + "' lancé 🙏");
+      },
+      onCancel: function(paymentId) {
+        alert("Paiement annulé.");
+      },
+      onError: function(error) {
+        alert("Erreur: " + error);
+      }
+    };
+
+    Pi.createPayment(paymentData, callbacks);
+  }
+</script>
+
 </body>
 </html>
