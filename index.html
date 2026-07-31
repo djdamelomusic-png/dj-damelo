@@ -3,46 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DJ DAMELO MUSIC - 1 Pi</title>
+  <title>DJ DAMELO MUSIC</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #FFA500, #FF8C00); color: white; text-align: center; }
     .container { padding: 20px; max-width: 600px; margin: auto; }
-    
-    /* NOUVEAU STYLE HEADER */
-    .header { padding: 10px 0; }
-    .header h1 { font-size: 36px; font-weight: 900; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
-    .header p { font-size: 16px; margin: 5px 0; font-weight: 500; }
-    .flags { font-size: 22px; margin-left: 5px; }
-
-    .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; margin-top: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-    .info { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 15px; margin: 20px 0; }
+    .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; }
+    .info { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 15px; margin: 20px 0; font-size: 14px; }
     .card { background: white; color: black; padding: 20px; border-radius: 15px; margin: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
     audio { width: 100%; margin: 10px 0; }
-    .btn-pi { background: linear-gradient(90deg, #00ff88, #00cc66); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 18px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
-    .socials { display: flex; justify-content: center; gap: 15px; margin: 15px 0; flex-wrap: wrap; }
-    .socials a { background: white; color: #FF8C00; padding: 10px 15px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; }
-    .socials a:hover { background: black; color: white; }
+    .btn-money { background: linear-gradient(90deg, #FFD700, #FFA500); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 16px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
+    .btn-whatsapp { background: #25D366; border: none; padding: 12px; width: 100%; border-radius: 50px; font-size: 15px; font-weight: bold; color: white; cursor: pointer; margin-top: 8px; }
+    .paiement { background: #f2f2f2; color: black; padding: 15px; border-radius: 10px; text-align: left; margin-top: 15px; display: none; }
+    .prix { font-size: 20px; font-weight: bold; color: #FF8C00; }
+    b { color: #FF8C00; }
   </style>
 </head>
-
-    <body>
-  <div class="container">
-   <img src="/damelo.jpg" alt="DJ DAMELO" class="logo">
-    <!-- TEXTE EN-DESSUS DU PROFIL -->
-    <div class="header">
-      <h1>DJ DAMELO</h1>
-      <p>Artiste - Chanteur - Producteur</p>
-      <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
-      <p>Écoutez gratuitement. Payez par Moov Money ou Tmoney pour télécharger en HQ 🔥</p>
-    </div>
-
 <body>
+  <div class="container">
+    <img src="photo.jpg" alt="DJ DAMELO" class="logo">
+    <h1>DJ DAMELO</h1>
+    <div class="info">Écoutez gratuitement. Payez par Moov Money ou Tmoney pour télécharger en HQ 🔥</div>
+    <h2>🎵 Mes Derniers Sons</h2>
+
     <!-- SON 1 -->
     <div class="card">
       <h3>1. Riche ou Pauvre</h3>
       <p class="prix">2000 FCFA</p>
       <audio controls>
-        <source src="/petit-damelo.mp3" type="audio/mpeg">
+        <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas l'audio.
       </audio>
       <button onclick="afficherPaiement('Riche ou Pauvre', 2000)" class="btn-money">Acheter et Télécharger</button>
       
@@ -60,49 +49,24 @@
       <h3>2. Petit Damelo</h3>
       <p class="prix">2000 FCFA</p>
       <audio controls>
-        <source src="/riche-ou-pauvre.mp3" type="audio/mpeg">
+        <source src="petit-damelo.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas l'audio.
       </audio>
-      <button onclick="afficherPaiement('Petit Damelo - Coupe Décalé', 2000)" class="btn-money">Acheter et Télécharger</button>
+      <button onclick="afficherPaiement('Petit Damelo', 2000)" class="btn-money">Acheter et Télécharger</button>
 
-      <div id="paiement-coupe" class="paiement">
+      <div id="paiement-petit" class="paiement">
         <h4>Comment payer :</h4>
         <p>1. Moov Money : Compose <b>*155*1*1#</b> → Envoyer à <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
         <p>2. Tmoney : Compose <b>*145*1*1#</b> → Envoyer à <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
         <p>3. Clique sur le bouton et envoie la capture 👇</p>
-        <button onclick="envoyerWhatsApp('Petit Damelo - Coupe Décalé', 2000)" class="btn-whatsapp">📲 Envoyer la capture sur WhatsApp</button>
+        <button onclick="envoyerWhatsApp('Petit Damelo', 2000)" class="btn-whatsapp">📲 Envoyer la capture sur WhatsApp</button>
       </div>
     </div>
 
   </div>
 
-  <button onclick="p
-
-    <h2>📱 Suivez-moi partout</h2>
-    <div class="social-links">
-      <a href="https://youtube.com/@dj-damelo?si=FNKO22RfBB6CczMn" target="_blank">▶️ YouTube</a>
-      <a href="https://open.spotify.com/user/31gwxocjetwo6psikmpge57cmpw4?si=GTRme8q6QWev1idi1k_w5A" target="_blank">🎵 Spotify</a>
-      <a href="https://on.soundcloud.com/J9QWLMdqzJxhputfo5" target="_blank">☁️ SoundCloud</a>
-      <a href="https://www.boomplay.com/shareUser/113931343?share_platform=an&srList=ANDROID&srModel=byWH&share_channel=whatsapp&share_content=user" target="_blank">💿 Boomplay</a>
-      <a href="https://vm.tiktok.com/ZS96T3CcfbdEE-ym6vk/" target="_blank">♪ TikTok</a>
-      <a href="https://www.instagram.com/dj_damelo?igsh=a2Zzejd4b2xpYjZz" target="_blank">📷 Insta</a>
-      <a href="https://www.facebook.com/share/18yyeS1TaS/" target="_blank">f Facebook</a>
-      <a href="https://x.com/Dj_Damelo" target="_blank">𝕏 X</a>
-      <a href="https://rapfame.app/user/dj_damelo" target="_blank">🎤 Rapfame</a>
-      <a href="https://t.me/+233242668880" target="_blank">💬 Telegram</a>
-      <a href="https://www.linkedin.com/in/bro-elisha-768b38231?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">💼 LinkedIn</a>
-      <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank">📍 Google</a>
-    </div>
-
-    <div class="contact">
-      <h2>📞 Contact / Booking</h2>
-      <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank">+233 24 266 8880</a></p>
-      <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank">+228 96 27 58 73</a></p>
-      <p>Email: dj.damelo.music@gmail.com</p>
-    </div>
-
-  </div>
   <script>
-    const numeroWhatsApp = "22896275873"; // Ton numéro Moov avec indicatif 228
+    const numeroWhatsApp = "22896275873";
 
     function afficherPaiement(nomSon, prix) {
       document.querySelectorAll('.paiement').forEach(div => div.style.display = 'none');
