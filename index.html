@@ -45,13 +45,40 @@
       <audio controls controlsList="nodownload">
         <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
       </audio>
+      <!-- BADGE GOLD & PLATINUM -->
+<div style="background: linear-gradient(135deg, #FFD700, #FFA500); 
+            padding: 15px; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin: 15px 0;
+            border: 2px solid #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
+  
+  <div style="font-size: 14px; color: #000; margin-bottom: 5px;">🏆 SINGLE CERTIFIÉ 🏆</div>
+  
+  <div id="streams-counter" style="font-size: 24px; font-weight: 900; color: #000;">
+    <span id="count">980,000,000</span> STREAMS
+  </div>
+  
+  <div style="font-size: 12px; color: #333; margin-top: 5px;">GOLD & PLATINUM</div>
+</div>
+
+<script>
+// Compteur qui monte doucement
+let count = 980000;
+setInterval(() => {
+  count += Math.floor(Math.random() * 5) + 1; // +1 à +5 streams
+  document.getElementById("count").innerText = count.toLocaleString('fr-FR');
+}, 3000); // toutes les 3 secondes
+</script>
       <button onclick="afficherPaiement('Riche ou Pauvre', 2000)" class="btn-money">Acheter et Télécharger HQ</button>
       
       <div id="paiement-riche" class="paiement">
         <h4>Comment payer :</h4>
-        <p>1. Moov Money : Compose <b>*155*1*1#</b> → Envoyer à <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
-        <p>2. Tmoney : Compose <b>*145*1*1#</b> → Envoyer à <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
-        <p>3. Clique sur le bouton et envoie la capture 👇</p>
+        <p>1.Moov Money : Paiement Marchand,compose <b>*155*2*2*120 500*120 500*Montant# et finaliser l'achat(Nom d'Ets:MERCH TRDWNIF 0234000)</b></p>
+        <p>2. Moov Money : Compose <b>*155*1*1#</b> → Envoyer à <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
+        <p>3. Tmoney : Compose <b>*145*1*1#</b> → Envoyer à <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
+        <p>4. Clique sur le bouton et envoie la capture 👇</p>
         <button onclick="envoyerWhatsApp('Riche ou Pauvre', 2000)" class="btn-whatsapp">📲 Envoyer la capture sur WhatsApp</button>
       </div>
     </div>
