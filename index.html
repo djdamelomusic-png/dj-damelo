@@ -27,7 +27,15 @@
     .contact { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; margin-top: 30px; }
   </style>
 </head>
-  <!-- DIAPORAMA 6 PHOTOS DJ DAMELO -->
+<body>
+  <div class="container">
+    <img src="photo.jpg" alt="DJ DAMELO" class="logo">
+    <!-- TEXTE EN-DESSUS DU PROFIL -->
+    <div class="header">
+    <h1>DJ DAMELO</h1>
+      <p>Artiste - Chanteur - Producteur</p>
+      <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
+       <!-- DIAPORAMA 6 PHOTOS DJ DAMELO -->
 <div class="slideshow-container" style="max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4);">
 
   <!-- 1. Plaque Gold -->
@@ -123,20 +131,12 @@ function showSlides() {
   for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // 4 secondes par photo
+  setTimeout(showSlides, 4000); // 6 secondes par photo
 }
 
 function plusSlides(n) {slideIndex += n-1; showSlides();}
 function currentSlide(n) {slideIndex = n-1; showSlides();}
 </script>
-<body>
-  <div class="container">
-    <img src="photo.jpg" alt="DJ DAMELO" class="logo">
-    <!-- TEXTE EN-DESSUS DU PROFIL -->
-    <div class="header">
-    <h1>DJ DAMELO</h1>
-      <p>Artiste - Chanteur - Producteur</p>
-      <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
           <h3>🎵 Mes Derniers Sons</h2>
     <div class="info">Écoutez les sons gratuitement. Payez pour les télécharger 🔥</div>
 
