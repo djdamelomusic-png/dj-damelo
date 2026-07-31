@@ -3,28 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DJ DAMELO MUSIC - Achat Son</title>
+  <title>DJ DAMELO MUSIC - 1 Pi</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #FFA500, #FF8C00); color: white; text-align: center; }
     .container { padding: 20px; max-width: 600px; margin: auto; }
-    .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; }
-    .info { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 15px; margin: 20px 0; font-size: 14px; }
+    
+    /* NOUVEAU STYLE HEADER */
+    .header { padding: 10px 0; }
+    .header h1 { font-size: 36px; font-weight: 900; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+    .header p { font-size: 16px; margin: 5px 0; font-weight: 500; }
+    .flags { font-size: 22px; margin-left: 5px; }
+
+    .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; margin-top: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+    .info { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 15px; margin: 20px 0; }
     .card { background: white; color: black; padding: 20px; border-radius: 15px; margin: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
     audio { width: 100%; margin: 10px 0; }
-    .btn-money { background: linear-gradient(90deg, #FFD700, #FFA500); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 16px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
-    .btn-whatsapp { background: #25D366; border: none; padding: 12px; width: 100%; border-radius: 50px; font-size: 15px; font-weight: bold; color: white; cursor: pointer; margin-top: 8px; }
-    .paiement { background: #f2f2f2; color: black; padding: 15px; border-radius: 10px; text-align: left; margin-top: 15px; display: none; }
-    .prix { font-size: 20px; font-weight: bold; color: #FF8C00; }
-    b { color: #FF8C00; }
+    .btn-pi { background: linear-gradient(90deg, #00ff88, #00cc66); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 18px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
+    .socials { display: flex; justify-content: center; gap: 15px; margin: 15px 0; flex-wrap: wrap; }
+    .socials a { background: white; color: #FF8C00; padding: 10px 15px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; }
+    .socials a:hover { background: black; color: white; }
   </style>
 </head>
-<body>
-  <div class="container">
-    <img src="/damelo.jpg" alt="DJ DAMELO" class="logo">
-    <h1>DJ DAMELO</h1>
-    <div class="info">Écoutez gratuitement. Payez par Moov Money ou Tmoney pour télécharger en HQ 🔥</div>
-    <h2>🎵 Mes Derniers Sons</h2>
 
+    <body>
+  <div class="container">
+   <img src="/damelo.jpg" alt="DJ DAMELO" class="logo">
+    <!-- TEXTE EN-DESSUS DU PROFIL -->
+    <div class="header">
+      <h1>DJ DAMELO</h1>
+      <p>Artiste - Chanteur - Producteur</p>
+      <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
+      <p>Écoutez gratuitement. Payez par Moov Money ou Tmoney pour télécharger en HQ 🔥</p>
+    </div>
+
+<body>
     <!-- SON 1 -->
     <div class="card">
       <h3>1. Riche ou Pauvre</h3>
