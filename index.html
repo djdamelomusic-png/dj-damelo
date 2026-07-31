@@ -27,6 +27,108 @@
     .contact { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; margin-top: 30px; }
   </style>
 </head>
+  <!-- DIAPORAMA 6 PHOTOS DJ DAMELO -->
+<div class="slideshow-container" style="max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4);">
+
+  <!-- 1. Plaque Gold -->
+  <div class="mySlides fade">
+    <img src="images/gold.jpg" style="width:100%; display:block;">
+    <div class="text">CERTIFIÉ GOLD & PLATINUM</div>
+  </div>
+
+  <!-- 2. Toi -->
+  <div class="mySlides fade">
+    <img src="images/moi.jpg" style="width:100%; display:block;">
+    <div class="text">DJ DAMELO</div>
+  </div>
+
+  <!-- 3. Pochette -->
+  <div class="mySlides fade">
+    <img src="images/pochette.jpg" style="width:100%; display:block;">
+    <div class="text">RICHE OU PAUVRE - 980M STREAMS</div>
+  </div>
+
+  <!-- 4. Singing -->
+  <div class="mySlides fade">
+    <img src="images/singing.jpg" style="width:100%; display:block;">
+    <div class="text">EN STUDIO</div>
+  </div>
+
+  <!-- 5. Neige -->
+  <div class="mySlides fade">
+    <img src="images/neige.jpg" style="width:100%; display:block;">
+    <div class="text">TOUR MONDIAL</div>
+  </div>
+
+  <!-- 6. Logo -->
+  <div class="mySlides fade">
+    <img src="images/logo.jpg" style="width:100%; display:block;">
+    <div class="text">DJ DAMELO OFFICIEL</div>
+  </div>
+
+  <!-- Flèches -->
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <!-- Points -->
+  <div style="text-align:center; padding:10px; background:#000;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+</div>
+
+<style>
+.mySlides {display: none; position: relative;}
+.fade {animation-name: fade; animation-duration: 1.5s;}
+@keyframes fade {from {opacity:.4} to {opacity: 1}}
+.text {
+  color: #fff; font-size: 18px; font-weight: bold;
+  position: absolute; bottom: 60px; width: 100%;
+  text-align: center; text-shadow: 2px 2px 4px #000;
+  background: rgba(0,0,0,0.5); padding: 8px 0;
+}
+.prev,.next {
+  cursor: pointer; position: absolute; top: 50%;
+  padding: 16px; color: white; font-weight: bold;
+  font-size: 22px; transition: 0.6s ease;
+  background: rgba(0,0,0,0.4); user-select: none;
+  border-radius: 0 3px 3px 0;
+}
+.next {right: 0; border-radius: 3px 0 0 3px;}
+.prev:hover,.next:hover {background: rgba(255,165,0,0.8);}
+.dot {
+  cursor: pointer; height: 12px; width: 12px;
+  margin: 0 3px; background-color: #555;
+  border-radius: 50%; display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,.dot:hover {background-color: #FFA500;}
+</style>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // 4 secondes par photo
+}
+
+function plusSlides(n) {slideIndex += n-1; showSlides();}
+function currentSlide(n) {slideIndex = n-1; showSlides();}
+</script>
 <body>
   <div class="container">
     <img src="photo.jpg" alt="DJ DAMELO" class="logo">
