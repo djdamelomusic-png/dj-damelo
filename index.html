@@ -5,17 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO MUSIC</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #FFA500, #FF8C00); color: white; text-align: center; }
-    .container { padding: 20px; max-width: 600px; margin: auto; }
-    .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; }
-    .info { background: rgba(255,255,255,0.2); padding: 15px; border-radius: 15px; margin: 20px 0; font-size: 14px; }
-    .card { background: white; color: black; padding: 20px; border-radius: 15px; margin: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-    audio { width: 100%; margin: 10px 0; }
-    .btn-money { background: linear-gradient(90deg, #FFD700, #FFA500); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 16px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
+    body { 
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(180deg, #FF8C00 0%, #FFD700 50%, #32CD32 100%); 
+      color: white; 
+      text-align: center; 
+      min-height: 100vh;
+    }
+    .container { padding: 20px; max-width: 700px; margin: auto; }
+    .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; margin-bottom: 10px; }
+    .info { background: rgba(255,255,255,0.25); padding: 15px; border-radius: 15px; margin: 20px 0; font-size: 15px; font-weight: bold; }
+    .card { background: rgba(255,255,255,0.95); color: black; padding: 20px; border-radius: 20px; margin: 20px 0; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+    audio { width: 100%; margin: 10px 0; border-radius: 10px; }
+    .btn-money { background: linear-gradient(90deg, #00ff88, #00cc66); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 17px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
     .btn-whatsapp { background: #25D366; border: none; padding: 12px; width: 100%; border-radius: 50px; font-size: 15px; font-weight: bold; color: white; cursor: pointer; margin-top: 8px; }
-    .paiement { background: #f2f2f2; color: black; padding: 15px; border-radius: 10px; text-align: left; margin-top: 15px; display: none; }
-    .prix { font-size: 20px; font-weight: bold; color: #FF8C00; }
+    .paiement { background: #f9f9f9; color: black; padding: 15px; border-radius: 10px; text-align: left; margin-top: 15px; display: none; }
+    .prix { font-size: 22px; font-weight: bold; color: #FF8C00; }
+    h2 { color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
     b { color: #FF8C00; }
+    .contact { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; margin-top: 30px; }
   </style>
 </head>
 <body>
@@ -61,6 +70,14 @@
       </div>
     </div>
 
+    <!-- CONTACT -->
+    <div class="contact">
+      <h3>📞 Contact / Booking</h3>
+      <p>WhatsApp 1: +233 24 266 8880</p>
+      <p>WhatsApp 2: +228 96 27 58 73</p>
+      <p>Email: dj.damelo.music@gmail.com</p>
+    </div>
+
   </div>
 
   <button onclick="p
@@ -81,7 +98,15 @@
       <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank">📍 Google</a>
     </div>
 
-  <script>
+     <div class="contact">
+      <h2>📞 Contact / Booking</h2>
+      <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank">+233 24 266 8880</a></p>
+      <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank">+228 96 27 58 73</a></p>
+      <p>Email: dj.damelo.music@gmail.com</p>
+    </div>
+
+  </div>
+    <script>
     const numeroWhatsApp = "22896275873";
 
     function afficherPaiement(nomSon, prix) {
@@ -97,6 +122,6 @@
       window.open(url, '_blank');
     }
   </script>
-    
 </body>
 </html>
+  
