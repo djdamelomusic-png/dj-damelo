@@ -42,7 +42,7 @@
       <h3>1. Riche ou Pauvre</h3>
       <p class="prix">2000 FCFA</p>
       <audio controls>
-        <source src="/riche-ou-pauvre.mp3" type="audio/mpeg">
+        <source src="/petit-damelo.mp3" type="audio/mpeg">
       </audio>
       <button onclick="afficherPaiement('Riche ou Pauvre', 2000)" class="btn-money">Acheter et Télécharger</button>
       
@@ -60,7 +60,7 @@
       <h3>2. Petit Damelo</h3>
       <p class="prix">2000 FCFA</p>
       <audio controls>
-        <source src="/petit-damelo.mp3" type="audio/mpeg">
+        <source src="/riche-ou-pauvre.mp3" type="audio/mpeg">
       </audio>
       <button onclick="afficherPaiement('Petit Damelo - Coupe Décalé', 2000)" class="btn-money">Acheter et Télécharger</button>
 
@@ -106,7 +106,7 @@
 
     function afficherPaiement(nomSon, prix) {
       document.querySelectorAll('.paiement').forEach(div => div.style.display = 'none');
-      let id = nomSon.includes('Riche') ? 'paiement-riche' : 'paiement-coupe';
+      let id = nomSon.includes('Riche') ? 'paiement-riche' : 'paiement-petit';
       document.getElementById(id).style.display = 'block';
       document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     }
