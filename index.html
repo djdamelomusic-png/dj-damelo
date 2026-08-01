@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6GBX85QCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E6GBX85QCX');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="https://tonsite.com/images/pochette.jpg">
@@ -261,47 +269,35 @@ setInterval(() => {
 </a>
 
 <style>
+/* Bouton WhatsApp Flottant - Version Mobile plus petite */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  right: 25px;
+  width: 50px;  /* au lieu de 60px */
+  height: 50px; /* au lieu de 60px */
+  bottom: 20px;
+  right: 20px;
   background-color: #25D366;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
+  font-size: 28px; /* au lieu de 35px */
   box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.3s ease;
-  font-weight: bold;
 }
-.whatsapp-float img {
-  width: 35px;
-  height: 35px;
-}
-.whatsapp-float span {
-  display: none;
-  margin-left: 10px;
-  font-size: 14px;
-}
-.whatsapp-float:hover {
-  width: 220px;
-  border-radius: 50px;
-}
-.whatsapp-float:hover span {
-  display: inline;
-}
-.whatsapp-float:hover img {
-  margin-left: 10px;
-}
-@media screen and (max-width: 767px) {
-  .whatsapp-float span { display: inline; }
-  .whatsapp-float { width: 200px; }
+
+/* Pour les très petits écrans < 400px */
+@media screen and (max-width: 400px) {
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
 </style>
 
