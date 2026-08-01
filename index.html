@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6GBX85QCX"></script>
@@ -236,52 +237,107 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
   
   <!-- BIO -->
   <p style="max-width: 700px; margin: 0 auto 25px; font-size: 16px; line-height: 1.8; color: #ddd;">
-    Basé entre <b>Lomé 🇹🇬</b> et <b>Accra 🇬🇭</b>, DJ Damelo s'impose comme l'une des voix montantes du Coupé Décalé et de l'Afrobeat africain. 
-    Avec plus de <b>980 Millions de streams</b> et des singles certifiés <b>GOLD & PLATINUM</b>, il enchaîne les hits qui font danser toute l'Afrique entière.
+    Basé entre <span style="color: #FFD700;">Lomé 🇹🇬</span> et <span style="color: #FFD700;">Accra 🇬🇭</span>, DJ Damelo s'impose comme l'une des voix montantes du Coupé Décalé et de l'Afrobeat africain. 
+    Avec plus de <b>980M+</b> et des singles certifiés <b>GOLD & PLATINUM</b>, il enchaîne les hits qui font danser toute l'Afrique entière.
     <br><br>
     Disponible pour concerts, soirées, et collaborations internationales.
   </p>
-  
+
+    <style>
+.btn-gold {
+  background: #FFD700; 
+  color: #000; 
+  padding: 12px 18px; 
+  border: none; 
+  border-radius: 25px; 
+  font-weight: bold; 
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* L'animation douce */
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px) scale(1.05); /* Monte + Grossit */
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6); /* Brille plus fort */
+  background: #FFC700; /* Or un peu plus foncé */
+}
+
+.btn-big {
+  width: 90%; 
+  max-width: 280px; 
+  margin-top: 5px;
+  padding: 14px 25px;
+  font-size: 14px;
+}
+</style>
   <!-- BADGES -->
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px;">
-  
-  <button style="background: #FFD700; color: #000; padding: 12px 18px; border: none; border-radius: 25px; font-weight: bold; font-size: 13px;">
-    GOLD CERTIFIED
-  </button>
-  
-  <button style="background: #FFD700; color: #000; padding: 12px 18px; border: none; border-radius: 25px; font-weight: bold; font-size: 13px;">
-    AFROBEAT
-  </button>
 
-  <button style="background: #FFD700; color: #000; padding: 12px 18px; border: none; border-radius: 25px; font-weight: bold; font-size: 13px;">
-    COUPÉ DÉCALÉ
-  </button>
-
-  <button style="background: #FFD700; color: #000; padding: 14px 25px; border: none; border-radius: 25px; font-weight: bold; font-size: 14px; width: 90%; max-width: 280px; margin-top: 5px;">
-    980M+ Streams
-  </button>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px;">
+  
+  <button class="btn-gold">GOLD CERTIFIED</button>
+  <button class="btn-gold">AFROBEAT</button>
+  <button class="btn-gold">COUPÉ DÉCALÉ</button>
+  <button class="btn-gold btn-big">980M+ Streams</button>
 
 </div>
 
-  
 </section>
-  <button onclick="p
 
-    <h2>📱 Suivez-moi partout</h2>
-    <div class="social-links">
-      <a href="https://youtube.com/@dj-damelo?si=FNKO22RfBB6CczMn" target="_blank">▶️ YouTube</a>
-      <a href="https://open.spotify.com/user/31gwxocjetwo6psikmpge57cmpw4?si=GTRme8q6QWev1idi1k_w5A" target="_blank">🎵 Spotify</a>
-      <a href="https://on.soundcloud.com/J9QWLMdqzJxhputfo5" target="_blank">☁️ SoundCloud</a>
-      <a href="https://www.boomplay.com/shareUser/113931343?share_platform=an&srList=ANDROID&srModel=byWH&share_channel=whatsapp&share_content=user" target="_blank">💿 Boomplay</a>
-      <a href="https://vm.tiktok.com/ZS96T3CcfbdEE-ym6vk/" target="_blank">♪ TikTok</a>
-      <a href="https://www.instagram.com/dj_damelo?igsh=a2Zzejd4b2xpYjZz" target="_blank">📷 Insta</a>
-      <a href="https://www.facebook.com/share/18yyeS1TaS/" target="_blank">f Facebook</a>
-      <a href="https://x.com/Dj_Damelo" target="_blank">𝕏 X</a>
-      <a href="https://rapfame.app/user/dj_damelo" target="_blank">🎤 Rapfame</a>
-      <a href="https://t.me/+233242668880" target="_blank">💬 Telegram</a>
-      <a href="https://www.linkedin.com/in/bro-elisha-768b38231?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">💼 LinkedIn</a>
-      <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank">📍 Google</a>
-    </div>
+  <!-- RÉSEAUX SOCIAUX AVEC VRAIES ICONES -->
+<h2 style="color:#ffc107; margin-top:40px;">📱 Suivez-moi partout</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.social-grid {
+  display:grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap:12px; 
+  margin:20px auto; 
+  max-width:500px;
+}
+.social-grid a {
+  text-decoration:none; 
+  padding:12px 8px; 
+  border-radius:10px; 
+  background:#1a1a1a; 
+  color:#fff; 
+  font-size:13px; 
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  gap:6px; 
+  transition:0.3s;
+  border:1px solid #333;
+}
+.social-grid a:hover { background:#ffc107; color:#000; transform:scale(1.05); }
+.social-grid i { font-size:22px; }
+</style>
+
+<div class="social-grid">
+  <a href="https://youtube.com/@dj-damelo?si=FNKO22RfBB6CczMn" target="_blank" style="background:#FF0000;"><i class="fa-brands fa-youtube"></i> YouTube</a>
+  
+  <a href="https://open.spotify.com/user/31gwxocjetwo6psikmpge57cmpw4?si=GTRme8q6QWev1idi1k_w5A" target="_blank" style="background:#1DB954;"><i class="fa-brands fa-spotify"></i> Spotify</a>
+  
+  <a href="https://on.soundcloud.com/J9QWLMdqzJxhputfo5" target="_blank" style="background:#FF5500;"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+  
+  <a href="https://www.boomplay.com/shareUser/113931343?share_platform=an&srList=ANDROID&srModel=byWH&share_channel=whatsapp&share_content=user" target="_blank" style="background:#FAB400;"><i class="fa-solid fa-compact-disc"></i> Boomplay</a>
+  
+  <a href="https://vm.tiktok.com/ZS96T3CcfbdEE-ym6vk/" target="_blank" style="background:#000;"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+  
+  <a href="https://www.instagram.com/dj_damelo?igsh=a2Zzejd4b2xpYjZz" target="_blank" style="background:#E4405F;"><i class="fa-brands fa-instagram"></i> Instagram</a>
+  
+  <a href="https://www.facebook.com/share/18yyeS1TaS/" target="_blank" style="background:#1877F2;"><i class="fa-brands fa-facebook"></i> Facebook</a>
+  
+  <a href="https://x.com/Dj_Damelo" target="_blank" style="background:#000;"><i class="fa-brands fa-x-twitter"></i> X</a>
+  
+  <a href="https://rapfame.app/user/dj_damelo" target="_blank" style="background:#FF3D00;"><i class="fa-solid fa-microphone-lines"></i> Rapfame</a>
+  
+  <a href="https://t.me/+233242668880" target="_blank" style="background:#0088CC;"><i class="fa-brands fa-telegram"></i> Telegram</a>
+  
+  <a href="https://www.linkedin.com/in/bro-elisha-768b38231?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" style="background:#0A66C2;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+  
+  <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank" style="background:#4285F4;"><i class="fa-solid fa-location-dot"></i> Google</a>
+</div>
 
      <div class="contact">
       <h2>📞 Contact / Booking</h2>
