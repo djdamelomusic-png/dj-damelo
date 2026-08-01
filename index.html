@@ -262,39 +262,44 @@ setInterval(() => {
     }
   </script>
 <!-- BOUTON WHATSAPP FLOTTANT DJ DAMELO -->
-<a href="https://wa.me/233242668880?text=Bonjour%20DJ%20DAMELO%2C%20je%20veux%20acheter%20RICHE%20OU%20PAUVRE%20à%202000%20FCFA" 
-   class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  <span>ACHETER 2000 FCFA</span>
+<a href="https://wa.me/233242668880?text=Salut%20DJ%20DAMELO%20je%20veux%20acheter%20RICHE%20OU%20PAUVRE%20à%202000FCFA" 
+   class="whatsapp-float" 
+   target="_blank">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
 <style>
 /* Bouton WhatsApp Flottant - Version Mobile plus petite */
 .whatsapp-float {
   position: fixed;
-  width: 50px;  /* au lieu de 60px */
-  height: 50px; /* au lieu de 60px */
+  width: 55px;
+  height: 55px;
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
   color: #FFF;
-  border-radius: 50px;
+  border-radius: 50%; /* rond parfait */
   text-align: center;
-  font-size: 28px; /* au lieu de 35px */
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: all 0.6s;
 }
 
-/* Pour les très petits écrans < 400px */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile */
 @media screen and (max-width: 400px) {
   .whatsapp-float {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
     bottom: 15px;
     right: 15px;
   }
