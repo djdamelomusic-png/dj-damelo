@@ -39,6 +39,7 @@
   </style>
 </head>
 <body>
+  <body>
   <div class="container">
     <img src="photo.jpg" alt="DJ DAMELO" class="logo">
     <!-- TEXTE EN-DESSUS DU PROFIL -->
@@ -46,6 +47,23 @@
     <h1>DJ DAMELO</h1>
       <p>Artiste - Chanteur - Producteur</p>
       <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
+      
+      <!-- LOADER -->
+<div id="loader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <h1 style="color: #FFD700; font-size: 40px; margin-bottom: 20px; animation: pulse 1s infinite;">DJ DAMELO</h1>
+  <div style="width: 50px; height: 50px; border: 4px solid #333; border-top: 4px solid #FFD700; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+</div>
+
+<style>
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+</style>
        <!-- DIAPORAMA 6 PHOTOS DJ DAMELO -->
 <div class="slideshow-container" style="max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4);">
 
@@ -220,24 +238,33 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
         <button onclick="envoyerWhatsApp('Petit Damelo', 2000)" class="btn-whatsapp">📲 Envoyer la capture sur WhatsApp</button>
       </div>
     </div>
-<!-- SECTION BIOGRAPHIE -->
-<section id="biographie" style="padding: 60px 20px; background: #000; color: #fff; text-align: center;">
-  <h2 style="font-size: 32px; color: #FFD700; margin-bottom: 20px;">À PROPOS DE DJ DAMELO</h2>
+      
+<!-- SECTION A PROPOS -->
+<section style="background: #0a0a0a; padding: 60px 20px; text-align: center; color: #fff;">
   
-  <!-- TA PHOTO -->
-  <img src="djdamelo-photo.jpg" alt="DJ DAMELO" style="width: 200px; height: 200px; border-radius: 50%; border: 4px solid #25D366; margin-bottom: 20px; object-fit: cover;">
+  <!-- PHOTO RONDE -->
+  <img src="djdamelo-photo.jpg" alt="DJ Damelo" 
+       style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid #FFD700; object-fit: cover; margin-bottom: 20px; box-shadow: 0 0 20px rgba(255,215,0,0.5);">
   
-  <p style="max-width: 700px; margin: 0 auto 20px; line-height: 1.8; font-size: 16px;">
-    Avec son hit <strong>"RICHE OU PAUVRE"</strong>, DJ DAMELO impose son style unique et son énergie. 
-    Son objectif : faire danser toute l'Afrique entière et exporter la musique africaine dans le monde entier.
+  <!-- NOM + TITRE -->
+  <h2 style="font-size: 32px; margin: 10px 0; color: #FFD700;">DJ DAMELO</h2>
+  <p style="font-size: 14px; color: #aaa; margin-bottom: 20px;">Producteur • DJ • Artiste Afrobeat et Coupé Décalé</p>
+  
+  <!-- BIO -->
+  <p style="max-width: 700px; margin: 0 auto 25px; font-size: 16px; line-height: 1.8; color: #ddd;">
+    Basé entre <b>Lomé 🇹🇬</b> et <b>Accra 🇬🇭</b>, DJ Damelo s'impose comme l'une des voix montantes du Coupé Décaléde et de l'Afrobeat africain. 
+    Avec plus de <b>980 Millions de streams</b> et des singles certifiés <b>GOLD & PLATINUM</b>, il enchaîne les hits qui font danser toute l'Afrique entière.
     <br><br>
-    📍 Basé à Accra, Ghana et à Lomé, Togo 📞 Disponible pour prestations, featuring et production
+    Disponible pour concerts, soirées, et collaborations internationales.
   </p>
-
-  <div style="margin-top: 30px; margin-bottom: 40px;">
-    <a href="https://wa.me/22896275873" target="_blank" style="background: #25D366; color: #fff; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">📱 Contact WhatsApp</a>
-    <a href="#musiques" style="background: #FFD700; color: #111; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">🎵 Écouter mes sons</a>
+  
+  <!-- BADGES -->
+  <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <span style="background: #FFD700; color: #000; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 13px;">980M+ Streams</span>
+    <span style="background: #FFD700; color: #000; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 13px;">GOLD CERTIFIED</span>
+    <span style="background: #FFD700; color: #000; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 13px;">AFROBEAT</span>
   </div>
+  
 </section>
   <button onclick="p
 
@@ -436,7 +463,51 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
   // Augmente toutes les 4 secondes
   setInterval(updateCounter, 4000);
 </script>
+  ... ton footer et tout le reste ...
+
+<script>
+  // SCRIPT DU COMPTEUR - déjà là
+  let count = 980000;
+  const counter = document.getElementById('count');
+  function updateCounter() {
+    count += Math.floor(Math.random() * 5) + 1;
+    counter.innerText = count.toLocaleString('en-US');
+  }
+  setInterval(updateCounter, 4000);
+
+  // SCRIPT ANTI-VOL - COLLE LE ICI EN DESSOUS
+  // 1. BLOQUER CLIC DROIT
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('⚠️ Contenu protégé par DJ DAMELO');
+  });
+
+  // 2. BLOQUER RACCOURCIS CLAVIER : Ctrl+C, Ctrl+S, Ctrl+U, F12
+  document.addEventListener('keydown', function(e) {
+    if(e.ctrlKey && (e.key === 'c' || e.key === 's' || e.key === 'u')) {
+      e.preventDefault();
+      alert('⚠️ Copie interdite');
+    }
+    if(e.key === 'F12') {
+      e.preventDefault();
+    }
+  });
+
+  // 3. BLOQUER SÉLECTION DE TEXTE SUR LES IMAGES
+  document.querySelectorAll('img').forEach(img => {
+    img.style.userSelect = 'none';
+    img.style.webkitUserDrag = 'none';
+    img.setAttribute('draggable', 'false');
+  });
+  // SCRIPT DU LOADER
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loader').style.display = 'none';
+  }, 1500); // 1.5 secondes
+});
+</script>
 
 </body>
+  
 </html>
   
