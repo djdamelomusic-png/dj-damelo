@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <style>
+.share-btn {
+  position: fixed; /* Reste en haut même si on scroll */
+  top: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  background: #FFD700;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  z-index: 9999; /* Toujours au dessus */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+</style>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google tag (gtag.js) -->
@@ -39,8 +64,26 @@
     .contact { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; margin-top: 30px; }
   </style>
 </head>
-<body>
+  
   <body>
+    <button class="share-btn" onclick="shareSite()">...</button>
+
+<script>
+function shareSite() {
+  if (navigator.share) {
+    // Pour mobile Android/iPhone : ouvre le menu de partage natif
+    navigator.share({
+      title: 'DJ DAMELO - Gold Certified Artist',
+      text: 'Découvre DJ Damelo - 980M+ Streams 🔥',
+      url: window.location.href
+    }).catch(err => console.log('Erreur partage', err));
+  } else {
+    // Pour PC : copie le lien
+    navigator.clipboard.writeText(window.location.href);
+    alert('Lien du site copié ! 📋 Colle-le pour partager');
+  }
+}
+</script>
   <div class="container">
     <img src="photo.jpg" alt="DJ DAMELO" class="logo">
     <!-- TEXTE EN-DESSUS DU PROFIL -->
@@ -285,7 +328,9 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
 </section>
 
   <!-- RÉSEAUX SOCIAUX AVEC VRAIES ICONES -->
-<h2 style="color:#ffc107; margin-top:40px;">📱 Suivez-moi partout</h2>
+<h2 style="color: #FFFFFF; text-align: center; font-size: 22px; font-weight: bold; margin: 20px 0; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+  📱 Suivez-moi partout
+</h2>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 .social-grid {
