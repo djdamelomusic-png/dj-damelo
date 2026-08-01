@@ -278,21 +278,50 @@ setInterval(() => {
   bottom: 20px;
   right: 20px;
   background-color: #FFFFFF; /* Fond blanc */
-  color: #25D366; /* Logo vert WhatsApp */
+  color: #25D366; /* Logo vert */
   border-radius: 50%;
   font-size: 32px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border: 2px solid #25D366; /* Bordure verte pour bien ressortir */
-  transition: transform 0.5s;
+  border: 2px solid #25D366;
+  
+  /* 2 ANIMATIONS */
+  animation: pulse-whatsapp 2s infinite, float-updown 3s ease-in-out infinite;
+}
+
+/* 1. Animation Pulse + Onde verte */
+@keyframes pulse-whatsapp {
+ 0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+ 70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+ 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* 2. Animation qui flotte de bas en haut */
+@keyframes float-updown {
+ 0%, 100% {
+    transform: translateY(0px); /* Position normale */
+  }
+ 50% {
+    transform: translateY(-8px); /* Monte de 8px */
+  }
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  animation: none; /* Stop toutes les anims au survol */
+  transform: scale(1.15);
 }
 
 /* Mobile */
@@ -303,6 +332,11 @@ setInterval(() => {
     font-size: 28px;
     bottom: 15px;
     right: 15px;
+  }
+  
+  @keyframes float-updown {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); } /* Monte de 6px sur mobile */
   }
 }
 </style>
