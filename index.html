@@ -419,6 +419,24 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
   </p>
   
 </footer>
+  <script>
+  // SCRIPT DU DIAPO - déjà là
+  function plusSlides(n) {slideIndex += n; showSlides();}
+  function currentSlide(n) {slideIndex = n-1; showSlides();}
+  
+  // NOUVEAU SCRIPT DU COMPTEUR
+  let count = 980000;
+  const counter = document.getElementById('count');
+  
+  function updateCounter() {
+    count += Math.floor(Math.random() * 5) + 1; // +1 à +5 streams
+    counter.innerText = count.toLocaleString('en-US');
+  }
+  
+  // Augmente toutes les 4 secondes
+  setInterval(updateCounter, 4000);
+</script>
+
 </body>
 </html>
   
