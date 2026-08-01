@@ -99,7 +99,32 @@
     <span class="dot" onclick="currentSlide(6)"></span>
   </div>
 </div>
-
+183  <!-- BADGE GOLD & PLATINUM --> 
+184  <div style="background: linear-gradient(135deg, #FFD700, #FFAS
+185      padding: 15px;
+186      border-radius: 12px;
+187      text-align: center;
+188      margin: 15px 0;
+189      border: 2px solid #FFD700;
+190      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
+191
+192    <div style="font-size: 14px; color: #000; margin-bottom: 5px;
+193
+194    <div id="streams-counter" style="font-size: 24px; font-weight:
+195      <span id="count">980,000,000</span> STREAMS
+196    </div>
+197
+198    <div style="font-size: 12px; color: #333; margin-top: 5px;">GOL
+199  </div>
+200
+201  <script>
+202  // Compteur qui monte doucement 
+203  let count = 980000;
+204  setInterval(() => {
+205    count += Math.floor(Math.random() * 5) + 1; // +1 à +5 streams
+206    document.getElementById("count").innerText = count.toLocaleStr
+207  }, 3000); // Toutes les 3 secondes
+208  </script>
 <style>
 .mySlides {display: none; position: relative;}
 .fade {animation-name: fade; animation-duration: 1.5s;}
@@ -179,32 +204,7 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
       <audio controls controlsList="nodownload">
         <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
       </audio>
-      <!-- BADGE GOLD & PLATINUM -->
-<div style="background: linear-gradient(135deg, #FFD700, #FFA500); 
-            padding: 15px; 
-            border-radius: 12px; 
-            text-align: center; 
-            margin: 15px 0;
-            border: 2px solid #FFD700;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
-  
-  <div style="font-size: 14px; color: #000; margin-bottom: 5px;">🏆 SINGLE CERTIFIÉ 🏆</div>
-  
-  <div id="streams-counter" style="font-size: 24px; font-weight: 900; color: #000;">
-    <span id="count">980,000,000</span> STREAMS
-  </div>
-  
-  <div style="font-size: 12px; color: #333; margin-top: 5px;">GOLD & PLATINUM</div>
-</div>
-
-<script>
-// Compteur qui monte doucement
-let count = 980000;
-setInterval(() => {
-  count += Math.floor(Math.random() * 5) + 1; // +1 à +5 streams
-  document.getElementById("count").innerText = count.toLocaleString('fr-FR');
-}, 3000); // toutes les 3 secondes
-</script>
+     
       <button onclick="afficherPaiement('Riche ou Pauvre', 2000)" class="btn-money">Acheter et Télécharger HQ</button>
       
       <div id="paiement-riche" class="paiement">
