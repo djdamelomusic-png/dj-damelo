@@ -159,20 +159,60 @@ body {
         box-shadow: 0 6px 15px rgba(255,140,0,0.5);
     }
 
-/* POUR CENTRER LE BOUTON DANS LA CARD */
-    .card button {
-        display: inline-block; /* au lieu de block */
-        margin: 10px auto;
-    }
-    
-    body {
-    background: linear-gradient(135deg, #A8FF78 0%, #78FFD6 100%);
-    min-height: 100vh;
+     /* CONTENEUR POUR CENTRER LES AUDIOS */
+.audio-player {
+    text-align: center;
+    margin: 20px auto;
 }
-     
+
+/* LA BARRE DU LECTEUR */
+audio {
+    width: 70%; /* au lieu de 100% */
+    max-width: 350px; /* taille max pour PC */
+    border-radius: 50px; /* coins arrondis */
+    box-shadow: 0 4px 10px rgba(255,215,0,0.3); /* glow doré */
+}
+
+/* POUR CENTRER LE BOUTON DANS LA CARD */
+body {
+  background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%); /* Fond noir stylé */
+  color: #fff; /* Texte blanc par défaut */
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* LA GRANDE CARTE */
+.card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid rgba(139, 92, 246, 0.4); /* Bordure violet */
+  border-radius: 25px;
+  padding: 30px 20px;
+  margin: 30px auto;
+  max-width: 650px;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+}
+
+/* TITRE */
 h1 {
-    color: #000;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  color: #FFD700; /* Or au lieu de noir */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glow or */
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* TOUS LES BOUTONS DANS LA CARTE */
+.card button {
+  display: block; /* block pour pouvoir centrer */
+  margin: 12px auto; /* centre le bouton */
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
      
 /* BOUTONS ACHETER - VERSION PETITE ET CENTRÉE */
@@ -299,53 +339,58 @@ h1 {
   <h4>Écoutez les sons gratuitement. Payez pour les télécharger 🔥</h4>
 
   <!-- 1 SEULE CARD POUR TOUT -->
-  <div class="card">
-    <h3 style="color:#000;">🔥 Site Officiel</h3>
+<div class="card">
+  <h3 style="color:#FFD700; text-align:center; margin-bottom:25px;">🔥 Site Officiel - Mes Sons</h3>
 
-    <!-- SON 1 -->
-    <div style="border-bottom:1px solid #ccc; padding-bottom:15px; margin-bottom:15px;">
-      <h4>1. Riche ou Pauvre</h4>
-      <p class="prix">2000 FCFA</p>
-      <audio controls controlsList="nodownload"><source src="riche-ou-pauvre.mp3" type="audio/mpeg"></audio>
-      <button onclick="afficherPaiement('riche')" class="btn-money">Acheter et Télécharger HQ</button>
-      <div id="paiement-riche" class="paiement">
-        <h4>Comment payer :</h4>
-        <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
-        <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
-        <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
-        <button onclick="envoyerWhatsApp('Riche ou Pauvre', 2000)" class="btn-whatsapp">📲 Envoyer la capture</button>
-      </div>
+  <!-- SON 1 ENCADRÉ -->
+  <div class="song-item">
+    <h4>1. Riche ou Pauvre</h4>
+    <p class="prix">2000 FCFA</p>
+    <audio controlsList="nodownload"><source src="riche-ou-pauvre.mp3" type="audio/mpeg"></audio>
+    <button onclick="afficherPaiement('riche')" class="btn-money">Acheter et Télécharger HQ</button>
+    
+    <div id="paiement-riche" class="paiement">
+      <h4>Comment payer :</h4>
+      <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
+      <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
+      <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
+      <button onclick="envoyerWhatsApp('Riche ou Pauvre', 2000)" class="btn-whatsapp">📲 Envoyer la capture</button>
     </div>
+  </div>
 
-    <!-- SON 2 -->
-    <div style="border-bottom:1px solid #ccc; padding-bottom:15px; margin-bottom:15px;">
-      <h4>2. Petit Damelo - Coupe Décalé</h4>
-      <p class="prix">2000 FCFA</p>
-      <audio controls controlsList="nodownload"><source src="petit-damelo.mp3" type="audio/mpeg"></audio>
-      <button onclick="afficherPaiement('petit')" class="btn-money">Acheter et Télécharger HQ</button>
-      <div id="paiement-petit" class="paiement">
-        <h4>Comment payer :</h4>
-        <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
-        <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
-        <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
-        <button onclick="envoyerWhatsApp('Petit Damelo', 2000)" class="btn-whatsapp">📲 Envoyer la capture</button>
-      </div>
+  <!-- SON 2 ENCADRÉ -->
+  <div class="song-item">
+    <h4>2. Petit Damelo - Coupe Décalé</h4>
+    <p class="prix">2000 FCFA</p>
+    <audio controlsList="nodownload"><source src="petit-damelo.mp3" type="audio/mpeg"></audio>
+    <button onclick="afficherPaiement('petit')" class="btn-money">Acheter et Télécharger HQ</button>
+    
+    <div id="paiement-petit" class="paiement">
+      <h4>Comment payer :</h4>
+      <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
+      <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
+      <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
+      <button onclick="envoyerWhatsApp('Petit Damelo', 2000)" class="btn-whatsapp">📲 Envoyer la capture</button>
     </div>
+  </div>
 
-    <div >
-      <h4>🎁 PACK DES 2 SONS</h4>
-      <p style="text-decoration:line-through; color:#888;">4000 FCFA</p>
-      <p class="prix">3000 FCFA <span style="font-size:12px; color:#00cc66;">-1000 FCFA</span></p>
-      <button onclick="afficherPaiement('pack')" class="btn-money">🔥 Acheter le Pack à 3000 FCFA</button>
-      <div id="paiement-pack" class="paiement">
-        <h4>Comment payer le Pack :</h4>
-        <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*3000#</b></p>
-        <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>3000 FCFA</b></p>
-        <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>3000 FCFA</b></p>
-        <button onclick="envoyerWhatsApp('Pack des 2 sons', 3000)" class="btn-whatsapp">📲 Envoyer la capture du Pack</button>
-      </div>
+  <!-- PACK ENCADRÉ EN OR -->
+  <div class="song-item pack">
+    <h4>🎁 PACK DES 2 SONS</h4>
+    <p style="text-decoration:line-through; color:#aaa; font-size:14px;">4000 FCFA</p>
+    <p class="prix">3000 FCFA <span style="font-size:12px; color:#00ff7f;">-1000 FCFA</span></p>
+    <button onclick="afficherPaiement('pack')" class="btn-money">🔥 Acheter le Pack à 3000 FCFA</button>
+    
+    <div id="paiement-pack" class="paiement">
+      <h4>Comment payer le Pack :</h4>
+      <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*3000#</b></p>
+      <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>3000 FCFA</b></p>
+      <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>3000 FCFA</b></p>
+      <button onclick="envoyerWhatsApp('Pack des 2 sons', 3000)" class="btn-whatsapp">📲 Envoyer la capture du Pack</button>
     </div>
-
+  </div>
+</div>
+   
   <!-- A PROPOS -->
   <section style="background: #0a0a0a; padding: 60px 20px; text-align: center; color: #fff;">
   
@@ -541,5 +586,47 @@ function shareSite() {
 </script>
 </div>
 
+   .card {
+  background: rgba(0,0,0,0.4);
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  border-radius: 25px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CHAQUE SON ENCADRÉ DANS LA GRANDE CARTE */
+.song-item {
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.song-item:last-child {
+  margin-bottom: 0; /* pas de marge pour le dernier */
+}
+
+.song-item h4 {
+  color: #FFD700;
+  margin: 0 0 10px 0;
+  font-size: 17px;
+}
+
+.song-item .prix {
+  color: #00FF7F;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0 12px 0;
+}
+
+/* LE PACK EN OR */
+.song-item.pack {
+  border: 2px solid #FFD700;
+  background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(139,92,246,0.1) 100%);
+}
+   
 </body>
 </html>
