@@ -76,19 +76,6 @@
    .card h3,.card h4 { color: #000; text-shadow: none; }
     b { color: #FF8C00; }
    .contact { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; margin-top: 30px; }
-
-    /* DIAPO */
-   .slideshow-container { max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4); }
-   .mySlides {display: none; position: relative;}
-   .fade {animation-name: fade; animation-duration: 1.5s;}
-    @keyframes fade {from {opacity:.4} to {opacity: 1}}
-   .text { color: #fff; font-size: 18px; font-weight: bold; position: absolute; bottom: 60px; width: 100%; text-align: center; text-shadow: 2px 2px 4px #000; background: rgba(0,0,0,0.5); padding: 8px 0; }
-   .prev,.next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); padding: 12px 16px; color: white; font-weight: bold; font-size: 24px; transition: 0.3s ease; background: rgba(0,0,0,0.5); user-select: none; border-radius: 50%; z-index: 10; }
-   .prev { left: 10px; }.next { right: 10px; }
-   .prev:hover,.next:hover { background: rgba(37, 211, 102, 0.8); }
-   .dot { cursor: pointer; height: 12px; width: 12px; margin: 0 3px; background-color: #555; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
-   .active,.dot:hover {background-color: #FFA500;}
-
     /* RESEAUX */
    .social-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin:20px auto; max-width:500px; }
    .social-grid a { text-decoration:none; padding:12px 8px; border-radius:10px; background:#1a1a1a; color:#fff; font-size:13px; display:flex; flex-direction:column; align-items:center; gap:6px; transition:0.3s; border:1px solid #333; }
@@ -115,6 +102,18 @@
     <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
   </div>
 
+    /* DIAPO */
+   .slideshow-container { max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4); }
+   .mySlides {display: none; position: relative;}
+   .fade {animation-name: fade; animation-duration: 1.5s;}
+    @keyframes fade {from {opacity:.4} to {opacity: 1}}
+   .text { color: #fff; font-size: 18px; font-weight: bold; position: absolute; bottom: 60px; width: 100%; text-align: center; text-shadow: 2px 2px 4px #000; background: rgba(0,0,0,0.5); padding: 8px 0; }
+   .prev,.next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); padding: 12px 16px; color: white; font-weight: bold; font-size: 24px; transition: 0.3s ease; background: rgba(0,0,0,0.5); user-select: none; border-radius: 50%; z-index: 10; }
+   .prev { left: 10px; }.next { right: 10px; }
+   .prev:hover,.next:hover { background: rgba(37, 211, 102, 0.8); }
+   .dot { cursor: pointer; height: 12px; width: 12px; margin: 0 3px; background-color: #555; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+   .active,.dot:hover {background-color: #FFA500;}
+    
   <!-- DIAPORAMA -->
   <div class="slideshow-container">
     <div class="mySlides fade"><img src="images/gold.jpg" style="width:100%;"><div class="text">CERTIFIÉ GOLD & PLATINUM</div></div>
@@ -194,20 +193,6 @@
       </div>
     </div>
 
-  <!-- FOOTER -->
-<div style="background: #000; padding: 30px 20px; margin-top: 40px; border-radius: 20px 20px 0 0;">
-    
-    <!-- BOUTONS CONDITIONS -->
-    <div style="text-align: center; margin-bottom: 20px;">
-        <button onclick="showConditions()" style="background: #FFD700; color: #000; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; margin: 5px; cursor: pointer;">
-            Conditions
-        </button>
-        <button onclick="showConfidentialite()" style="background: #FFD700; color: #000; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; margin: 5px; cursor: pointer;">
-            Confidentialité
-        </button>
-    </div>
-  </div>
-
   <!-- A PROPOS -->
   <section style="background: #0a0a0a; padding: 60px 20px; text-align: center; color: #fff;">
   
@@ -273,16 +258,43 @@
   <p><b>2. Achat des sons</b><br>Chaque titre est vendu au prix de 2000 FCFA. Paiement via Moov Money ou Tmoney. Envoi du MP3 par WhatsApp sous 24h.</p>
   <p><b>3. Droits d'utilisation</b><br>Licence d'écoute personnelle. Diffusion commerciale interdite sans accord écrit.</p>
   <p><b>4. Remboursement</b><br>Aucun remboursement après envoi du fichier audio.</p>
+  <h3 style="color: #FFD700; text-align: center;">Conditions Générales d'Utilisation</h3>
+  
+  <p><b>1. Objet</b><br>
+  Le site https://djdamelomusic-png.github.io/dj-damelo/ est la plateforme officielle de DJ Damelo pour la vente et l'écoute de ses titres musicaux.</p>
+
+  <p><b>2. Achat des sons</b><br>
+  Chaque titre est vendu au prix de 2000 FCFA. Le paiement s'effectue via Moov Money ou Tmoney. Après validation du paiement, le fichier MP3 vous sera envoyé par WhatsApp sous 24h.</p>
+
+  <p><b>3. Droits d'utilisation</b><br>
+  L'achat vous donne une licence d'écoute personnelle et non commerciale. Toute diffusion en radio, boîte de nuit, publicité ou revente sans accord écrit de DJ Damelo est strictement interdite.</p>
+
+  <p><b>4. Remboursement</b><br>
+  Aucun remboursement n'est possible après envoi du fichier audio.</p>
 </section>
 
 <!-- POLITIQUE DE CONFIDENTIALITE -->
 <section id="termes" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
   <h3 style="color: #FFD700; text-align: center;">Politique de Confidentialité</h3>
-  <p><b>1. Collecte des données</b><br>WhatsApp et email pour: envoi du son, booking, news.</p>
-  <p><b>2. Protection des données</b><br>Vos infos ne sont JAMAIS vendues ni partagées.</p>
-  <p><b>3. Contact</b><br>Email : dj.damelo.music@gmail.com<br>WhatsApp : +228 96 27 58 73 / +233 24 266 8880</p>
-  <p style="font-size: 12px; color: #777; text-align: center; margin-top: 20px;">Dernière mise à jour : Août 2026</p>
-</section>
+  
+  <p><b>1. Collecte des données</b><br>
+  Nous collectons uniquement votre numéro WhatsApp et votre email pour :
+    - Vous envoyer le son acheté
+    - Répondre à vos demandes de booking
+    - Vous informer des nouvelles sorties</p>
+
+  <p><b>2. Protection des données</b><br>
+  Vos informations ne sont JAMAIS vendues ni partagées à des tiers. Elles restent entre DJ Damelo et vous.</p>
+
+  <p><b>3. Contact</b><br>
+  Pour toute demande de suppression de vos données ou question : 
+  Email : dj.damelo.music@gmail.com<br>
+  WhatsApp : +228 96 27 58 73 / +233 24 266 8880</p>
+
+  <p style="font-size: 12px; color: #777; text-align: center; margin-top: 20px;">
+    Dernière mise à jour : Août 2026
+  </p>
+  </section>
 
 <!-- FOOTER AVEC BOUTONS EN HAUT -->
 <footer style="background: #000; color: #fff; text-align: center; padding: 30px 20px; margin-top: 40px; border-top: 2px solid #FFD700;">
@@ -294,9 +306,27 @@
   <p style="font-size: 11px; color: #666;">Site officiel • Lomé, Togo & Accra, Ghana</p>
 </footer>
 
+  <script>
+  // SCRIPT DU DIAPO - déjà là
+  function plusSlides(n) {slideIndex += n; showSlides();}
+  function currentSlide(n) {slideIndex = n-1; showSlides();}
+  
+  // NOUVEAU SCRIPT DU COMPTEUR
+  let count = 980000;
+  const counter = document.getElementById('count');
+  
+  function updateCounter() {
+    count += Math.floor(Math.random() * 5) + 1; // +1 à +5 streams
+    counter.innerText = count.toLocaleString('en-US');
+  }
+  
+  // Augmente toutes les 4 secondes
+  setInterval(updateCounter, 4000);
+</script>
+
 <script>
 // NUMERO POUR LES PAIEMENTS - Utilise le numéro Togo
-const numeroWhatsAppPaiement = "22896275873"; 
+const numeroWhatsAppPaiement = "233242668880"; 
 
 // PAIEMENT - VERSION UNIQUE
 function afficherPaiement(son) {
