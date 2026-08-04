@@ -25,6 +25,20 @@
    <!-- TOUT LE CSS ICI -->
    
   <style>
+     /* ESPACE ENTRE LES PACKS */
+.song-item {
+    margin-bottom: 30px; /* espace entre chaque carte */
+    padding-bottom: 25px; /* espace avant la ligne */
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3); /* ligne violet transparente */
+}
+
+/* ENLEVER LA LIGNE DU DERNIER PACK */
+.song-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+     
      audio {
   filter: hue-rotate(270deg) brightness(1.1); /* rend le lecteur violet */
 }
