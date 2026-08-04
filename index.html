@@ -2,25 +2,11 @@
 <html lang="fr">
 <head>
   <style>
-    .share-btn {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  background: transparent; /* PAS DE FOND */
-  border: none;
-  font-size: 28px;
-  font-weight: bold;
-  color: #000000; /* NOIR */
-  cursor: pointer;
-  z-index: 9999;
-  padding: 8px 12px;
-  transition: all 0.2s ease;
-}
-
-.share-btn:hover {
-  color: #FFD700; /* Devient doré au survol */
-  transform: scale(1.2);
-}
+    .card { background:#111; padding:20px; border:2px solid #ffc107; border-radius:12px; margin:20px auto; max-width:500px; }
+.prix { color:#00ff00; font-size:18px; font-weight:bold; margin:5px 0; }
+.btn-money { background:#00ff00; color:#000; padding:12px; border:none; border-radius:8px; font-weight:bold; width:100%; cursor:pointer; font-size:15px; }
+.btn-whatsapp { background:#25D366; color:#fff; padding:12px; border:none; border-radius:8px; font-weight:bold; width:100%; cursor:pointer; margin-top:10px; }
+.paiement { background:#0a0a0a; padding:12px; border-radius:8px; border:1px dashed #ffc107; margin-top:12px; text-align:left; font-size:14px; }
   </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -224,45 +210,66 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
           <h3>🎵 Mes Derniers Sons</h2>
     <div class="info">Écoutez les sons gratuitement. Payez pour les télécharger 🔥</div>
 
-    <!-- SON 1 -->
-    <div class="card">
-      <h3>1. Riche ou Pauvre</h3>
-      <p class="prix">2000 FCFA</p>
-      <audio controls controlsList="nodownload">
-        <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
-      </audio>
-      <button onclick="afficherPaiement('Riche ou Pauvre', 2000)" class="btn-money">Acheter et Télécharger HQ</button>
-      
-      <div id="paiement-riche" class="paiement">
-        <h4>Comment payer :</h4>
-        <p>1.Moov Money : Paiement Marchand,compose <b>*155*2*2*120 500*120 500*Montant#</b></p>
-        <p>Suivez les étapes pour finaliser l'achat(Nom d'Ets:MERCH TRDWNIF 0234000)
-        <p>2. Moov Money : Compose <b>*155*1*1#</b> → Envoyer à <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
-        <p>3. Tmoney : Compose <b>*145*1*1#</b> → Envoyer à <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
-        <p>4. Clique sur le bouton et envoie la capture 👇</p>
-        <button onclick="envoyerWhatsApp('Riche ou Pauvre', 2000)" class="btn-whatsapp">📲 Envoyer la capture sur WhatsApp</button>
-      </div>
-    </div>
+    <!-- 1 SEULE CARD POUR TOUT -->
+<div class="card">
+  <h3 style="color:#ffc107; margin-bottom:15px;">🔥 Boutique Officielle</h3>
 
-    <!-- SON 2 -->
-    <div class="card">
-      <h3>2. Petit Damelo</h3>
-      <p class="prix">2000 FCFA</p>
-      <audio controls controlsList="nodownload">
-        <source src="petit-damelo.mp3" type="audio/mpeg">
-      </audio>
-      <button onclick="afficherPaiement('Petit Damelo', 2000)" class="btn-money">Acheter et Télécharger HQ</button>
-
-      <div id="paiement-petit" class="paiement">
-        <h4>Comment payer :</h4>
-        <p>1.Moov Money : Paiement Marchand,compose <b>*155*2*2*120 500*120 500*Montant#</b></p>
-        <p>Suivez les étapes pour finaliser l'achat(Nom d'Ets:MERCH TRDWNIF 0234000)
-        <p>1. Moov Money : Compose <b>*155*1*1#</b> → Envoyer à <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
-        <p>2. Tmoney : Compose <b>*145*1*1#</b> → Envoyer à <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
-        <p>3. Clique sur le bouton et envoie la capture 👇</p>
-        <button onclick="envoyerWhatsApp('Petit Damelo', 2000)" class="btn-whatsapp">📲 Envoyer la capture sur WhatsApp</button>
-      </div>
+  <!-- SON 1 -->
+  <div style="border-bottom:1px solid #333; padding-bottom:15px; margin-bottom:15px;">
+    <h4>1. Riche ou Pauvre</h4>
+    <p class="prix">2000 FCFA</p>
+    <audio controlsList="nodownload" style="width:100%; margin:10px 0;">
+      <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="afficherPaiement('riche')" class="btn-money">Acheter et Télécharger HQ</button>
+    
+    <div id="paiement-riche" class="paiement" style="display:none;">
+      <h4>Comment payer :</h4>
+      <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
+      <p><small>Nom d'Ets: MERCH TRDWNIF 0234000</small></p>
+      <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
+      <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
+      <button onclick="envoyerWhatsApp('Riche ou Pauvre', 2000)" class="btn-whatsapp">📲 Envoyer la capture</button>
     </div>
+  </div>
+
+  <!-- SON 2 -->
+  <div style="border-bottom:1px solid #333; padding-bottom:15px; margin-bottom:15px;">
+    <h4>2. Petit Damelo - Coupe Décalé</h4>
+    <p class="prix">2000 FCFA</p>
+    <audio controls controlsList="nodownload" style="width:100%; margin:10px 0;">
+      <source src="petit-damelo.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="afficherPaiement('petit')" class="btn-money">Acheter et Télécharger HQ</button>
+
+    <div id="paiement-petit" class="paiement" style="display:none;">
+      <h4>Comment payer :</h4>
+      <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
+      <p><small>Nom d'Ets: MERCH TRDWNIF 0234000</small></p>
+      <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
+      <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>2000 FCFA</b></p>
+      <button onclick="envoyerWhatsApp('Petit Damelo', 2000)" class="btn-whatsapp">📲 Envoyer la capture</button>
+    </div>
+  </div>
+
+  <!-- PACK PROMO -->
+  <div style="background:#1a1a1a; padding:15px; border-radius:10px; border:2px dashed #ffc107;">
+    <h4 style="color:#ffc107;">🎁 PACK DES 2 SONS</h4>
+    <p style="text-decoration:line-through; color:#888;">4000 FCFA</p>
+    <p class="prix" style="font-size:22px;">3000 FCFA <span style="font-size:12px; color:#00ff00;">-1000 FCFA</span></p>
+    <button onclick="afficherPaiement('pack')" class="btn-money" style="background:#ffc107;">🔥 Acheter le Pack à 3000 FCFA</button>
+
+    <div id="paiement-pack" class="paiement" style="display:none;">
+      <h4>Comment payer le Pack :</h4>
+      <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*3000#</b></p>
+      <p><small>Nom d'Ets: MERCH TRDWNIF 0234000</small></p>
+      <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>3000 FCFA</b></p>
+      <p>3. <b>Tmoney</b> : <b>*145*1*1#</b> → <b>70 10 06 03</b> → <b>3000 FCFA</b></p>
+      <button onclick="envoyerWhatsApp('Pack des 2 sons', 3000)" class="btn-whatsapp">📲 Envoyer la capture du Pack</button>
+    </div>
+  </div>
+
+</div>
       
 <!-- SECTION A PROPOS -->
 <section style="background: #0a0a0a; padding: 60px 20px; text-align: center; color: #fff;">
@@ -560,6 +567,20 @@ function currentSlide(n) {slideIndex = n-1; showSlides();}
   
   // Augmente toutes les 4 secondes
   setInterval(updateCounter, 4000);
+   function afficherPaiement(son) {
+  // Cache tout
+  document.getElementById('paiement-riche').style.display = 'none';
+  document.getElementById('paiement-petit').style.display = 'none';
+  document.getElementById('paiement-pack').style.display = 'none';
+  // Affiche celui qu'on a cliqué
+  document.getElementById('paiement-' + son).style.display = 'block';
+}
+
+function envoyerWhatsApp(nomSon, prix) {
+  let message = `Bonjour DJ DAMELO, j'ai payé ${prix} FCFA pour ${nomSon}. Voici ma capture d'écran.`;
+  let numero = "22896275873"; // CHANGE PAR TON NUMERO WHATSAPP
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(message)}`, '_blank');
+}
 </script>
 
     <button class="share-btn" onclick="shareSite()">⋯</button>
