@@ -130,6 +130,7 @@
       <span class="dot" onclick="currentSlide(5)"></span><span class="dot" onclick="currentSlide(6)"></span>
     </div>
   </div>
+</div>
 
    <!-- COMPTEUR DETACHE -->
 <section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 25px 20px; text-align: center; margin: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
@@ -253,13 +254,6 @@
 
 <!-- CONDITIONS D'UTILISATION -->
 <section id="conditions" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
-  <h3 style="color: #FFD700; text-align: center;">Conditions Générales d'Utilisation</h3>
-  <p><b>1. Objet</b><br>Le site est la plateforme officielle de DJ Damelo pour la vente et l'écoute de ses titres musicaux.</p>
-  <p><b>2. Achat des sons</b><br>Chaque titre est vendu au prix de 2000 FCFA. Paiement via Moov Money ou Tmoney. Envoi du MP3 par WhatsApp sous 24h.</p>
-  <p><b>3. Droits d'utilisation</b><br>Licence d'écoute personnelle. Diffusion commerciale interdite sans accord écrit.</p>
-  <p><b>4. Remboursement</b><br>Aucun remboursement après envoi du fichier audio.</p>
-  <h3 style="color: #FFD700; text-align: center;">Conditions Générales d'Utilisation</h3>
-  
   <p><b>1. Objet</b><br>
   Le site https://djdamelomusic-png.github.io/dj-damelo/ est la plateforme officielle de DJ Damelo pour la vente et l'écoute de ses titres musicaux.</p>
 
@@ -271,10 +265,8 @@
 
   <p><b>4. Remboursement</b><br>
   Aucun remboursement n'est possible après envoi du fichier audio.</p>
-</section>
 
 <!-- POLITIQUE DE CONFIDENTIALITE -->
-<section id="termes" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
   <h3 style="color: #FFD700; text-align: center;">Politique de Confidentialité</h3>
   
   <p><b>1. Collecte des données</b><br>
@@ -322,6 +314,7 @@
   
   // Augmente toutes les 4 secondes
   setInterval(updateCounter, 4000);
+    
 </script>
 
 <script>
@@ -341,21 +334,6 @@ function envoyerWhatsApp(nomSon, prix) {
   let message = `Salut DJ DAMELO 🔥\n\nJe veux acheter "${nomSon}" à ${prix} FCFA.\n\nVoici la capture de mon paiement 👇`;
   let url = `https://wa.me/${numeroWhatsAppPaiement}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
-}
-
-// DIAPO
-function plusSlides(n) {slideIndex += n; showSlides();}
-function currentSlide(n) {slideIndex = n; showSlides();}
-
-// COMPTEUR
-let count = 980000000;
-const counter = document.getElementById('count');
-if(counter){
-  function updateCounter() {
-    count += Math.floor(Math.random() * 5) + 1;
-    counter.innerText = count.toLocaleString('fr-FR');
-  }
-  setInterval(updateCounter, 4000);
 }
 </script>
 
