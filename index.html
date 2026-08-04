@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO MUSIC</title>
+  <style>
+     /* DIAPO */
+   .slideshow-container { max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4); }
+   .mySlides {display: none; position: relative;}
+   .fade {animation-name: fade; animation-duration: 1.5s;}
+    @keyframes fade {from {opacity:.4} to {opacity: 1}}
+   .text { color: #fff; font-size: 18px; font-weight: bold; position: absolute; bottom: 60px; width: 100%; text-align: center; text-shadow: 2px 2px 4px #000; background: rgba(0,0,0,0.5); padding: 8px 0; }
+   .prev,.next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); padding: 12px 16px; color: white; font-weight: bold; font-size: 24px; transition: 0.3s ease; background: rgba(0,0,0,0.5); user-select: none; border-radius: 50%; z-index: 10; }
+   .prev { left: 10px; }.next { right: 10px; }
+   .prev:hover,.next:hover { background: rgba(37, 211, 102, 0.8); }
+   .dot { cursor: pointer; height: 12px; width: 12px; margin: 0 3px; background-color: #555; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+   .active,.dot:hover {background-color: #FFA500;}
+    </style>
 
   <!-- OG POUR PARTAGE -->
   <meta property="og:image" content="https://tonsite.com/images/pochette.jpg">
@@ -101,18 +114,6 @@
     <p>Artiste - Chanteur - Producteur</p>
     <p>DJ Officiel <span class="flags">🇹🇬 🇬🇭</span></p>
   </div>
-
-    /* DIAPO */
-   .slideshow-container { max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4); }
-   .mySlides {display: none; position: relative;}
-   .fade {animation-name: fade; animation-duration: 1.5s;}
-    @keyframes fade {from {opacity:.4} to {opacity: 1}}
-   .text { color: #fff; font-size: 18px; font-weight: bold; position: absolute; bottom: 60px; width: 100%; text-align: center; text-shadow: 2px 2px 4px #000; background: rgba(0,0,0,0.5); padding: 8px 0; }
-   .prev,.next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); padding: 12px 16px; color: white; font-weight: bold; font-size: 24px; transition: 0.3s ease; background: rgba(0,0,0,0.5); user-select: none; border-radius: 50%; z-index: 10; }
-   .prev { left: 10px; }.next { right: 10px; }
-   .prev:hover,.next:hover { background: rgba(37, 211, 102, 0.8); }
-   .dot { cursor: pointer; height: 12px; width: 12px; margin: 0 3px; background-color: #555; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
-   .active,.dot:hover {background-color: #FFA500;}
     
   <!-- DIAPORAMA -->
   <div class="slideshow-container">
@@ -251,9 +252,10 @@
    target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
-
+  
 <!-- CONDITIONS D'UTILISATION -->
 <section id="conditions" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
+   <h3 style="color: #FFD700; text-align: center;">Conditions d'utilisations</h3>
   <p><b>1. Objet</b><br>
   Le site https://djdamelomusic-png.github.io/dj-damelo/ est la plateforme officielle de DJ Damelo pour la vente et l'écoute de ses titres musicaux.</p>
 
@@ -265,6 +267,7 @@
 
   <p><b>4. Remboursement</b><br>
   Aucun remboursement n'est possible après envoi du fichier audio.</p>
+  
 
 <!-- POLITIQUE DE CONFIDENTIALITE -->
   <h3 style="color: #FFD700; text-align: center;">Politique de Confidentialité</h3>
