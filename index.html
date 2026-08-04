@@ -367,28 +367,25 @@ audio {
   </div>
 </div>
 
-   <!-- COMPTEUR DETACHE -->
-<section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 25px 20px; text-align: center; margin: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+ <!-- COMPTEUR DETACHE PLUS COMPACT -->
+<section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 20px 15px; text-align: center; margin: 20px auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px;"> <!-- J'AI AJOUTÉ max-width + margin auto -->
   <div style="font-size: 14px; font-weight: bold; margin-bottom: 5px; color: #000;">🏆 SINGLE CERTIFIÉ 🏆</div>
-  <div id="streams-counter" style="font-size: 36px; font-weight: bold; color: #000;">
+  <div id="streams-counter" style="font-size: 32px; font-weight: bold; color: #000;"> <!-- J'AI BAISSÉ à 32px -->
     <span id="count">980,000,000</span>
   </div>
-  <div style="font-size: 22px; font-weight: bold; color: #000;">STREAMS</div>
+  <div style="font-size: 20px; font-weight: bold; color: #000;">STREAMS</div> <!-- J'AI BAISSÉ à 20px -->
   <div style="font-size: 13px; margin-top: 5px; color: #333;">GOLD & PLATINUM</div>
 </section>
 
   <h2>🎵 Mes Derniers Sons</h2>
-  <h4>Écoutez les sons gratuitement. Payez pour les télécharger 🔥</h4>
-
-<!-- 1 SEULE CARD POUR TOUT -->
-<div class="card">
-  <h3 style="color:#FFD700; text-align:center; margin-bottom:25px;">🔥 Site Officiel - Mes Sons</h3>
+  <h4>Écoutez les sons gratuitement. Payez pour les télécharger <h/>
+     <h3>🔥 Site Officiel 🔥 </h3>
 
   <!-- SON 1 ENCADRÉ -->
   <div class="song-item">
     <h4>1. Riche ou Pauvre</h4>
     <p class="prix">2000 FCFA</p>
-    <audio controlsList="nodownload" style="width:100%; margin:10px 0; border-radius:10px;">
+    <audio controls controlsList="nodownload" style="width:100%; margin:10px 0; border-radius:10px;">
       <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
       Votre navigateur ne supporte pas l'audio.
     </audio>
@@ -641,49 +638,7 @@ function envoyerWhatsApp(nomSon, prix) {
 }
      
 </script>
-</div>
+  </div>
 
-   .card {
-  background: rgba(0,0,0,0.4);
-  border: 2px solid rgba(139, 92, 246, 0.5);
-  border-radius: 25px;
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* CHAQUE SON ENCADRÉ DANS LA GRANDE CARTE */
-.song-item {
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.song-item:last-child {
-  margin-bottom: 0; /* pas de marge pour le dernier */
-}
-
-.song-item h4 {
-  color: #FFD700;
-  margin: 0 0 10px 0;
-  font-size: 17px;
-}
-
-.song-item .prix {
-  color: #00FF7F;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 8px 0 12px 0;
-}
-
-/* LE PACK EN OR */
-.song-item.pack {
-  border: 2px solid #FFD700;
-  background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(139,92,246,0.1) 100%);
-}
-   
 </body>
 </html>
