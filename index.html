@@ -301,10 +301,6 @@
   <p style="font-size: 11px; color: #666;">Site officiel • Lomé, Togo & Accra, Ghana</p>
 </footer>
 
-  <script>
-  // SCRIPT DU DIAPO - déjà là
-  function plusSlides(n) {slideIndex += n; showSlides();}
-  function currentSlide(n) {slideIndex = n-1; showSlides();}
   
   // NOUVEAU SCRIPT DU COMPTEUR
   let count = 980000;
@@ -335,10 +331,33 @@ function afficherPaiement(son) {
 
 function envoyerWhatsApp(nomSon, prix) {
   let message = `Salut DJ DAMELO 🔥\n\nJe veux acheter "${nomSon}" à ${prix} FCFA.\n\nVoici la capture de mon paiement 👇`;
-  let url = `https://wa.me/${numeroWhatsAppPaiement}?text=${encodeURIComponent(message)}`;
+  let url = `https://wa.me/233242668880?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
 </script>
+  
+  <script>
+  // SCRIPT DU DIAPO - déjà là
+let slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) { showSlides(slideIndex += n); }
+function currentSlide(n) { showSlides(slideIndex = n); }
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+  for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+// Auto slide toutes les 4 secondes
+setInterval(() => { plusSlides(1); }, 4000);
+    
 </body>
 </html>
