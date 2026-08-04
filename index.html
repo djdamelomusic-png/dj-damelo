@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO MUSIC</title>
   <style>
+    ... tout ton CSS ...
+    
+    .underline { 
+        text-decoration: underline; 
+    }
+
      /* DIAPO */
    .slideshow-container { max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4); }
    .mySlides {display: none; position: relative;}
@@ -255,7 +261,7 @@
   
 <!-- CONDITIONS D'UTILISATION -->
 <section id="conditions" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
-   <h3 style="color: #FFD700; text-align: center;">Conditions d'utilisations</h3>
+  <h2 class="underline">Conditions d'utilisations</h2>
   <p><b>1. Objet</b><br>
   Le site https://djdamelomusic-png.github.io/dj-damelo/ est la plateforme officielle de DJ Damelo pour la vente et l'écoute de ses titres musicaux.</p>
 
@@ -270,7 +276,7 @@
   
 
 <!-- POLITIQUE DE CONFIDENTIALITE -->
-  <h3 style="color: #FFD700; text-align: center;">Politique de Confidentialité</h3>
+  <h2 class="underline">Politique de confidentialités</h2>
   
   <p><b>1. Collecte des données</b><br>
   Nous collectons uniquement votre numéro WhatsApp et votre email pour :
@@ -301,21 +307,6 @@
   <p style="font-size: 11px; color: #666;">Site officiel • Lomé, Togo & Accra, Ghana</p>
 </footer>
 
-  
-  // NOUVEAU SCRIPT DU COMPTEUR
-  let count = 980000;
-  const counter = document.getElementById('count');
-  
-  function updateCounter() {
-    count += Math.floor(Math.random() * 5) + 1; // +1 à +5 streams
-    counter.innerText = count.toLocaleString('en-US');
-  }
-  
-  // Augmente toutes les 4 secondes
-  setInterval(updateCounter, 4000);
-    
-</script>
-
 <script>
 // NUMERO POUR LES PAIEMENTS - Utilise le numéro Togo
 const numeroWhatsAppPaiement = "233242668880"; 
@@ -335,29 +326,65 @@ function envoyerWhatsApp(nomSon, prix) {
   window.open(url, '_blank');
 }
 </script>
-  
+
+<script>
+    // SCRIPT DU DIAPO - déjà là
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function currentSlide(n) { showSlides(slideIndex = n); }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+        for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+        slides[slideIndex-1].style.display = "block"; 
+        dots[slideIndex-1].className += " active";
+    }
+
+    // Auto slide toutes les 4 secondes
+    setInterval(() => { plusSlides(1); }, 4000);
+
+
+    // NOUVEAU SCRIPT DU COMPTEUR
+    let count = 980000;
+    const counter = document.getElementById('count');
+    function updateCounter() { 
+        count += Math.floor(Math.random() * 5) + 1; // +1 à +5
+        counter.innerText = count.toLocaleString('en-US');
+    }
+    // Augmente toutes les 4 secondes
+    setInterval(updateCounter, 4000);
+</script>
+
   <script>
-  // SCRIPT DU DIAPO - déjà là
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) { showSlides(slideIndex += n); }
-function currentSlide(n) { showSlides(slideIndex = n); }
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
+// FONCTION PARTAGE
+function shareSite() {
+  const shareData = {
+    title: 'DJ DAMELO MUSIC',
+    text: '🔥 Découvre les nouveaux sons de DJ Damelo !',
+    url: window.location.href
+  }
+  
+  if (navigator.share && navigator.canShare(shareData)) {
+    navigator.share(shareData);
+  } else {
+    // Fallback : copie le lien
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert("Lien copié ! ✅ \n" + window.location.href)
+    });
+  }
 }
 
-// Auto slide toutes les 4 secondes
-setInterval(() => { plusSlides(1); }, 4000);
-    
+// ICI TU COLLES AUSSI TON SCRIPT DU DIAPO + COMPTEUR S'IL Y EST PAS
+</script>
+</body>
+</html>
+
 </body>
 </html>
