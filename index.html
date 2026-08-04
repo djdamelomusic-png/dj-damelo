@@ -5,12 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO MUSIC</title>
   <style>
-    ... tout ton CSS ...
+     /* BLOC CONTACT / BOOKING */
+.contact-box {
+    background: rgba(0, 0, 0, 0.35); /* fond noir transparent */
+    backdrop-filter: blur(10px); /* effet flou glassmorphism */
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* bordure blanche légère */
+}
     
     .underline { 
         text-decoration: underline; 
     }
+    .contact-box, .contact-box a {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
 
+    /* CONTENEUR GLOBAL */
+.container {
+    max-width: 900px; /* réduit la largeur max */
+    margin: 0 auto;   /* centre le site */
+    padding: 20px;    /* espace sur les côtés en mobile */
+}
      /* DIAPO */
    .slideshow-container { max-width: 900px; position: relative; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 25px rgba(255,165,0,0.4); }
    .mySlides {display: none; position: relative;}
@@ -109,7 +127,9 @@
    .btn-gold:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6); background: #FFC700; }
   </style>
 </head>
+  
 <body>
+  
 <div class="container">
 
   <button class="share-btn" onclick="shareSite()">⋯</button>
@@ -243,7 +263,7 @@
     <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank" style="background:#4285F4;"><i class="fa-solid fa-location-dot"></i> Google</a>
   </div>
 
- <div class="contact">
+ <div class="contact-box">
   <h2>📞 Contact / Booking</h2>
   <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank" style="color:#fff;">+233 24 266 8880</a></p>
   <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank" style="color:#fff;">+228 96 27 58 73</a></p>
@@ -382,9 +402,9 @@ function shareSite() {
 }
 
 // ICI TU COLLES AUSSI TON SCRIPT DU DIAPO + COMPTEUR S'IL Y EST PAS
+    
 </script>
-</body>
-</html>
+</div>
 
 </body>
 </html>
