@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO MUSIC</title>
   <style>
+    /* BOUTONS ACHETER */
+.btn-buy {
+    display: inline-block; /* au lieu de block = ne prend plus 100% */
+    background: #00FF7F; /* vert que t'as déjà */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px; /* moins de padding = moins gros */
+    font-size: 14px; /* texte un peu plus petit */
+    border-radius: 25px; /* arrondi mais moins ovale */
+    text-decoration: none;
+    margin: 10px auto; /* centre le bouton */
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    transform: scale(1.05);
+    background: #00E676;
+}
+    body {
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%); /* bleu ciel dégradé */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
      /* BLOC CONTACT / BOOKING */
 .contact-box {
     background: rgba(0, 0, 0, 0.35); /* fond noir transparent */
