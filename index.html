@@ -5,30 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DJ DAMELO MUSIC</title>
   <style>
-    /* BOUTONS ACHETER */
-.btn-money {
-    display: inline-block; /* au lieu de block = ne prend plus 100% */
-    background: #00FF7F; /* vert que t'as déjà */
-    color: black;
-    font-weight: bold;
-    padding: 10px 20px; /* moins de padding = moins gros */
-    font-size: 14px; /* texte un peu plus petit */
-    border-radius: 25px; /* arrondi mais moins ovale */
-    text-decoration: none;
-    margin: 10px auto; /* centre le bouton */
-    transition: 0.3s;
-}
-
-.btn-money:hover {
-    transform: scale(1.05);
-    background: #00E676;
-}
-    body {
+   body {
     background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%); /* bleu ciel dégradé */
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+/* BOUTONS ACHETER - VERSION PETITE ET CENTRÉE */
+.btn-money {
+    display: inline-block; /* ne prend plus 100% */
+    background: #00FF7F; /* vert fluo */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px; /* moins gros */
+    font-size: 14px; /* texte plus petit */
+    border-radius: 25px; /* arrondi */
+    text-decoration: none;
+    border: none;
+    margin: 10px auto; /* centre le bouton */
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,255,127,0.3);
+}
+
+.btn-money:hover {
+    transform: scale(1.05);
+    background: #00E676;
+    box-shadow: 0 6px 15px rgba(0,230,118,0.5);
+}
+
+/* POUR CENTRER LE BOUTON DANS LA CARD */
+.card button {
+  display: block;
+  margin: 10px auto; /* force le centrage */
+}
+    
      /* BLOC CONTACT / BOOKING */
 .contact-box {
     background: rgba(0, 0, 0, 0.35); /* fond noir transparent */
