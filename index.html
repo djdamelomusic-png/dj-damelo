@@ -61,6 +61,16 @@ h1 {
   margin: 20px 0;
   text-shadow: none; /* pour enlever l'ombre blanche qu'on avait mis avant */
 }
+
+     /* TITRE "SUIVEZ PARTOUT" EN BLANC */
+.suivez-partout {
+    color: #FFFFFF; /* BLANC PUR */
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px 0 15px 0;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5); /* petit glow violet */
+}
      
 body {
   margin: 0;
@@ -165,33 +175,31 @@ body {
    .btn-gold:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6); background: #FFC700; }
 
     <!-- PACK -->
-    .btn-money {
-    display: inline-block;
-    background: linear-gradient(90deg, #FF8C00, #FFA500);
-    color: white;
-    font-weight: bold;
-    padding: 12px 30px;
-    font-size: 15px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    margin: 15px auto;
-    transition: 0.3s;
+ .btn-money {
+  background: linear-gradient(90deg, #8B5CF6 0%, #FFD700 100%);
+  color: #000;
+  border: none;
+  padding: 8px 16px; /* AVANT: 12px 20px → PLUS PETIT */
+  border-radius: 25px; /* un peu moins arrondi */
+  font-weight: 600; /* moins gras */
+  font-size: 13px; /* AVANT: 15px → PLUS PETIT */
+  cursor: pointer;
+  width: auto; /* AVANT: 100% → prend juste la largeur du texte */
+  display: inline-block; /* pour centrer avec text-align */
+  margin: 10px auto; /* centré */
+  transition: 0.3s;
 }
-     .pack {
-        text-align: center;
-    }
-
-       .btn-money:hover {
-        transform: scale(1.05);
-        background: linear-gradient(90deg, #FFA500, #FF8C00); /* orange plus foncé */
-        box-shadow: 0 6px 15px rgba(255,140,0,0.5);
-    }
-
+.btn-money:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
      /* CONTENEUR POUR CENTRER LES AUDIOS */
 .audio-player {
     text-align: center;
     margin: 20px auto;
+}
+     .song-item {
+  text-align: center; /* centre le bouton */
 }
 
 /* LA BARRE DU LECTEUR */
@@ -462,7 +470,7 @@ audio {
   </section>
 
   <!-- RESEAUX -->
-<h2 class="titre-noir">📱 Suivez-moi partout</h2>
+<h2 class="Suivez-moi partout">📱 Suivez-moi partout</h2>
   <div class="social-grid">
     <a href="https://youtube.com/@dj-damelo?si=FNKO22RfBB6CczMn" target="_blank" style="background:#FF0000;"><i class="fa-brands fa-youtube"></i> YouTube</a>
     <a href="https://open.spotify.com/user/31gwxocjetwo6psikmpge57cmpw4" target="_blank" style="background:#1DB954;"><i class="fa-brands fa-spotify"></i> Spotify</a>
