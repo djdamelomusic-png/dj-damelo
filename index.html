@@ -21,9 +21,38 @@
 
   <!-- ICONES -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
- 
+
    <!-- TOUT LE CSS ICI -->
   <style>
+     /* POUR CENTRER LE BOUTON DANS LA CARD */
+body {
+  background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%); /* Fond noir stylé */
+  color: #fff; /* Texte blanc par défaut */
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* LA GRANDE CARTE */
+.card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid rgba(139, 92, 246, 0.4); /* Bordure violet */
+  border-radius: 25px;
+  padding: 30px 20px;
+  margin: 30px auto;
+  max-width: 650px;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+}
+
+/* TITRE */
+h1 {
+  color: #FFD700; /* Or au lieu de noir */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glow or */
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+         
      .titre-noir {
   color: #000;
   text-align: center;
@@ -173,35 +202,6 @@ audio {
     box-shadow: 0 4px 10px rgba(255,215,0,0.3); /* glow doré */
 }
 
-/* POUR CENTRER LE BOUTON DANS LA CARD */
-body {
-  background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%); /* Fond noir stylé */
-  color: #fff; /* Texte blanc par défaut */
-  margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  min-height: 100vh;
-}
-
-/* LA GRANDE CARTE */
-.card {
-  background: rgba(20, 20, 20, 0.9);
-  border: 2px solid rgba(139, 92, 246, 0.4); /* Bordure violet */
-  border-radius: 25px;
-  padding: 30px 20px;
-  margin: 30px auto;
-  max-width: 650px;
-  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
-}
-
-/* TITRE */
-h1 {
-  color: #FFD700; /* Or au lieu de noir */
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glow or */
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
 /* TOUS LES BOUTONS DANS LA CARTE */
 .card button {
   display: block; /* block pour pouvoir centrer */
@@ -214,18 +214,48 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
 }
-     
-/* BOUTONS ACHETER - VERSION PETITE ET CENTRÉE */
-    .btn-money {
-        display: inline-block;
-        background: linear-gradient(90deg, #FF8C00, #FFA500); /* orange pack */
-        color: white; /* blanc sur orange c'est mieux */
-        font-weight: bold;
-        padding: 10px 20px;
-        font-size: 14px;
-        border-radius: 25px;
-        border: none;
-    }
+
+     /* BOUTON ACHETER */
+.btn-money {
+  background: linear-gradient(90deg, #8B5CF6 0%, #FFD700 100%);
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+.btn-money:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255,215,0,0.5);
+}
+
+/* BOUTON WHATSAPP */
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* SECTION PAIEMENT */
+.paiement {
+  background: rgba(0,0,0,0.3);
+  border: 1px dashed #FFD700;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+.paiement h4 { color: #FFD700; margin-bottom: 10px; }
 
      /* BLOC CONTACT / BOOKING */
 .contact-box {
@@ -290,6 +320,18 @@ h1 {
    .prev:hover,.next:hover { background: rgba(37, 211, 102, 0.8); }
    .dot { cursor: pointer; height: 12px; width: 12px; margin: 0 3px; background-color: #555; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
    .active,.dot:hover {background-color: #FFA500;}
+
+     /* BARRES AUDIO COURTES */
+.audio-player {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.audio-player audio {
+    width: 200px;  /* <-- ICI TU RÈGLES LA LONGUEUR */
+    height: 35px;  /* <-- ICI LA HAUTEUR */
+}
     
     </style>
 </head>
@@ -338,7 +380,7 @@ h1 {
   <h2>🎵 Mes Derniers Sons</h2>
   <h4>Écoutez les sons gratuitement. Payez pour les télécharger 🔥</h4>
 
-  <!-- 1 SEULE CARD POUR TOUT -->
+<!-- 1 SEULE CARD POUR TOUT -->
 <div class="card">
   <h3 style="color:#FFD700; text-align:center; margin-bottom:25px;">🔥 Site Officiel - Mes Sons</h3>
 
@@ -346,10 +388,13 @@ h1 {
   <div class="song-item">
     <h4>1. Riche ou Pauvre</h4>
     <p class="prix">2000 FCFA</p>
-    <audio controlsList="nodownload"><source src="riche-ou-pauvre.mp3" type="audio/mpeg"></audio>
+    <audio controlsList="nodownload" style="width:100%; margin:10px 0; border-radius:10px;">
+      <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas l'audio.
+    </audio>
     <button onclick="afficherPaiement('riche')" class="btn-money">Acheter et Télécharger HQ</button>
     
-    <div id="paiement-riche" class="paiement">
+    <div id="paiement-riche" class="paiement" style="display:none;"> <!-- CACHÉ AU DÉPART -->
       <h4>Comment payer :</h4>
       <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
       <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
@@ -362,10 +407,13 @@ h1 {
   <div class="song-item">
     <h4>2. Petit Damelo - Coupe Décalé</h4>
     <p class="prix">2000 FCFA</p>
-    <audio controlsList="nodownload"><source src="petit-damelo.mp3" type="audio/mpeg"></audio>
+    <audio controls controlsList="nodownload" style="width:100%; margin:10px 0; border-radius:10px;">
+      <source src="petit-damelo.mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas l'audio.
+    </audio>
     <button onclick="afficherPaiement('petit')" class="btn-money">Acheter et Télécharger HQ</button>
     
-    <div id="paiement-petit" class="paiement">
+    <div id="paiement-petit" class="paiement" style="display:none;"> <!-- CACHÉ AU DÉPART -->
       <h4>Comment payer :</h4>
       <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
       <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>2000 FCFA</b></p>
@@ -381,7 +429,7 @@ h1 {
     <p class="prix">3000 FCFA <span style="font-size:12px; color:#00ff7f;">-1000 FCFA</span></p>
     <button onclick="afficherPaiement('pack')" class="btn-money">🔥 Acheter le Pack à 3000 FCFA</button>
     
-    <div id="paiement-pack" class="paiement">
+    <div id="paiement-pack" class="paiement" style="display:none;"> <!-- CACHÉ AU DÉPART -->
       <h4>Comment payer le Pack :</h4>
       <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*3000#</b></p>
       <p>2. <b>Moov Money</b> : <b>*155*1*1#</b> → <b>96 27 58 73</b> → <b>3000 FCFA</b></p>
@@ -582,7 +630,16 @@ function shareSite() {
 }
 
 // ICI TU COLLES AUSSI TON SCRIPT DU DIAPO + COMPTEUR S'IL Y EST PAS
-    
+
+function afficherPaiement(id) {
+  document.getElementById('paiement-' + id).style.display = 'block';
+}
+
+function envoyerWhatsApp(nomSon, prix) {
+  let message = `Bonjour DJ DAMELO, j'ai payé ${prix} FCFA pour "${nomSon}". Voici ma capture :`;
+  window.open(`https://wa.me/22870100603?text=${encodeURIComponent(message)}`);
+}
+     
 </script>
 </div>
 
