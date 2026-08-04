@@ -132,12 +132,15 @@
     </div>
   </div>
 
-  <!-- COMPTEUR -->
-  <section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 25px 20px; margin: 20px; border-radius: 20px;">
-    <div style="font-size: 14px; font-weight: bold; color: #000;">🏆 SINGLE CERTIFIÉ 🏆</div>
-    <div id="streams-counter" style="font-size: 36px; font-weight: bold; color: #000;"><span id="count">980,000,000</span></div>
-    <div style="font-size: 22px; font-weight: bold; color: #000;">STREAMS</div>
-  </section>
+   <!-- COMPTEUR DETACHE -->
+<section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 25px 20px; text-align: center; margin: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+  <div style="font-size: 14px; font-weight: bold; margin-bottom: 5px; color: #000;">🏆 SINGLE CERTIFIÉ 🏆</div>
+  <div id="streams-counter" style="font-size: 36px; font-weight: bold; color: #000;">
+    <span id="count">980,000,000</span>
+  </div>
+  <div style="font-size: 22px; font-weight: bold; color: #000;">STREAMS</div>
+  <div style="font-size: 13px; margin-top: 5px; color: #333;">GOLD & PLATINUM</div>
+</section>
 
   <h2>🎵 Mes Derniers Sons</h2>
   <div class="info">Écoutez les sons gratuitement. Payez pour les télécharger 🔥</div>
@@ -190,16 +193,40 @@
         <button onclick="envoyerWhatsApp('Pack des 2 sons', 3000)" class="btn-whatsapp">📲 Envoyer la capture du Pack</button>
       </div>
     </div>
+
+  <!-- FOOTER -->
+<div style="background: #000; padding: 30px 20px; margin-top: 40px; border-radius: 20px 20px 0 0;">
+    
+    <!-- BOUTONS CONDITIONS -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button onclick="showConditions()" style="background: #FFD700; color: #000; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; margin: 5px; cursor: pointer;">
+            Conditions
+        </button>
+        <button onclick="showConfidentialite()" style="background: #FFD700; color: #000; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; margin: 5px; cursor: pointer;">
+            Confidentialité
+        </button>
+    </div>
   </div>
 
   <!-- A PROPOS -->
-  <section style="background: #0a0a0a; padding: 60px 20px; border-radius:20px; margin:20px 0;">
-    <img src="djdamelo-photo.jpg" alt="DJ Damelo" style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid #FFD700;">
-    <h6 style="font-size: 14px;color: white;">A Propos de</h6>
-    <h2 style="font-size: 32px; color: #FFD700;">DJ DAMELO</h2>
-    <p style="max-width: 700px; margin: 0 auto 25px; color: #ddd;">
-      Basé entre <span style="color: #FFD700;">Lomé 🇹🇬</span> et <span style="color: #FFD700;">Accra 🇬🇭</span>, +<b>980M+</b> streams, certifié <b>GOLD & PLATINUM</b>.
-    </p>
+  <section style="background: #0a0a0a; padding: 60px 20px; text-align: center; color: #fff;">
+  
+  <!-- PHOTO RONDE -->
+  <img src="djdamelo-photo.jpg" alt="DJ Damelo" 
+       style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid #FFD700; object-fit: cover; margin-bottom: 20px; box-shadow: 0 0 20px rgba(255,215,0,0.5);">
+  
+  <!-- NOM + TITRE -->
+  <h6 style="font-size: 14px;color: white;margin-bottom: 20px;">A Propos de</h6>
+  <h2 style="font-size: 32px; margin: 10px 0; color: #FFD700;">DJ DAMELO</h2>
+  <p style="font-size: 14px; color: #aaa; margin-bottom: 20px;">Producteur • DJ • Artiste Afrobeat et Coupé Décalé</p>
+  
+  <!-- BIO -->
+  <p style="max-width: 700px; margin: 0 auto 25px; font-size: 16px; line-height: 1.8; color: #ddd;">
+    Basé entre <span style="color: #FFD700;">Lomé 🇹🇬</span> et <span style="color: #FFD700;">Accra 🇬🇭</span>, DJ Damelo s'impose comme l'une des voix montantes du Coupé Décalé et de l'Afrobeat africain. 
+    Avec plus de <b>980M+</b> et des singles certifiés <b>GOLD & PLATINUM</b>, il enchaîne les hits qui font danser toute l'Afrique entière.
+    <br><br>
+    Disponible pour concerts, soirées, et collaborations internationales.
+  </p>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
       <button class="btn-gold">GOLD CERTIFIED</button><button class="btn-gold">AFROBEAT</button>
       <button class="btn-gold">COUPÉ DÉCALÉ</button><button class="btn-gold">980M+ Streams</button>
@@ -223,53 +250,55 @@
     <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank" style="background:#4285F4;"><i class="fa-solid fa-location-dot"></i> Google</a>
   </div>
 
-  <div class="contact">
-    <h2>📞 Contact / Booking</h2>
-    <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank" style="color:#fff;">+233 24 266 8880</a></p>
-    <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank" style="color:#fff;">+228 96 27 58 73</a></p>
-    <p>Email: dj.damelo.music@gmail.com</p>
-  </div>
+ <div class="contact">
+  <h2>📞 Contact / Booking</h2>
+  <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank" style="color:#fff;">+233 24 266 8880</a></p>
+  <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank" style="color:#fff;">+228 96 27 58 73</a></p>
+  <p>Email: <a href="mailto:dj.damelo.music@gmail.com" style="color:#fff;">dj.damelo.music@gmail.com</a></p>
+</div>
 
 </div> <!-- FIN CONTAINER -->
 
-<!-- WHATSAPP FLOTTANT -->
-<a href="https://wa.me/233242668880?text=Salut%20DJ%20DAMELO" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<!-- BOUTON WHATSAPP FLOTTANT DJ DAMELO -->
+<a href="https://wa.me/233242668880?text=Salut%20DJ%20DAMELO%20je%20veux%20booker" 
+   class="whatsapp-float" 
+   target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-<!-- FOOTER -->
-<footer style="background: #000; color: #fff; text-align: center; padding: 30px 20px; border-top: 2px solid #FFD700;">
+<!-- CONDITIONS D'UTILISATION -->
+<section id="conditions" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
+  <h3 style="color: #FFD700; text-align: center;">Conditions Générales d'Utilisation</h3>
+  <p><b>1. Objet</b><br>Le site est la plateforme officielle de DJ Damelo pour la vente et l'écoute de ses titres musicaux.</p>
+  <p><b>2. Achat des sons</b><br>Chaque titre est vendu au prix de 2000 FCFA. Paiement via Moov Money ou Tmoney. Envoi du MP3 par WhatsApp sous 24h.</p>
+  <p><b>3. Droits d'utilisation</b><br>Licence d'écoute personnelle. Diffusion commerciale interdite sans accord écrit.</p>
+  <p><b>4. Remboursement</b><br>Aucun remboursement après envoi du fichier audio.</p>
+</section>
+
+<!-- POLITIQUE DE CONFIDENTIALITE -->
+<section id="termes" style="background: #111; color: #ddd; padding: 25px; margin: 20px; border-radius: 12px; line-height: 1.6; text-align: left;">
+  <h3 style="color: #FFD700; text-align: center;">Politique de Confidentialité</h3>
+  <p><b>1. Collecte des données</b><br>WhatsApp et email pour: envoi du son, booking, news.</p>
+  <p><b>2. Protection des données</b><br>Vos infos ne sont JAMAIS vendues ni partagées.</p>
+  <p><b>3. Contact</b><br>Email : dj.damelo.music@gmail.com<br>WhatsApp : +228 96 27 58 73 / +233 24 266 8880</p>
+  <p style="font-size: 12px; color: #777; text-align: center; margin-top: 20px;">Dernière mise à jour : Août 2026</p>
+</section>
+
+<!-- FOOTER AVEC BOUTONS EN HAUT -->
+<footer style="background: #000; color: #fff; text-align: center; padding: 30px 20px; margin-top: 40px; border-top: 2px solid #FFD700;">
   <div style="margin-bottom: 20px;">
     <a href="#conditions" style="display: inline-block; background: #FFD700; color: #000; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 5px;">Conditions</a>
     <a href="#termes" style="display: inline-block; background: #FFD700; color: #000; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 5px;">Confidentialité</a>
   </div>
-  <p style="font-size: 12px; color: #aaa;">© 2026 DJ Damelo. Tous droits réservés.</p>
+  <p style="font-size: 12px; color: #aaa; margin: 10px 0;">© 2026 DJ Damelo. Tous droits réservés.</p>
+  <p style="font-size: 11px; color: #666;">Site officiel • Lomé, Togo & Accra, Ghana</p>
 </footer>
 
 <script>
-// PARTAGE
-function shareSite() {
-  if (navigator.share) {
-    navigator.share({ title: 'DJ DAMELO - Gold Certified Artist', text: 'Découvre DJ Damelo - 980M+ Streams', url: window.location.href });
-  } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert('Lien du site copié! 📋');
-  }
-}
+// NUMERO POUR LES PAIEMENTS - Utilise le numéro Togo
+const numeroWhatsAppPaiement = "22896275873"; 
 
-// DIAPORAMA
-let slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) { showSlides(slideIndex += n); }
-function currentSlide(n) { showSlides(slideIndex = n); }
-function showSlides(n) {
-  let i; let slides = document.getElementsByClassName("mySlides"); let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
-  slides[slideIndex-1].style.display = "block"; dots[slideIndex-1].className += " active";
-}
-setInterval(() => { plusSlides(1); }, 4000);
-
-// PAIEMENT
+// PAIEMENT - VERSION UNIQUE
 function afficherPaiement(son) {
   document.getElementById('paiement-riche').style.display = 'none';
   document.getElementById('paiement-petit').style.display = 'none';
@@ -277,16 +306,28 @@ function afficherPaiement(son) {
   document.getElementById('paiement-' + son).style.display = 'block';
   document.getElementById('paiement-' + son).scrollIntoView({ behavior: 'smooth' });
 }
+
 function envoyerWhatsApp(nomSon, prix) {
   let message = `Salut DJ DAMELO 🔥\n\nJe veux acheter "${nomSon}" à ${prix} FCFA.\n\nVoici la capture de mon paiement 👇`;
-  let url = `https://wa.me/22896275873?text=${encodeURIComponent(message)}`;
+  let url = `https://wa.me/${numeroWhatsAppPaiement}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
+
+// DIAPO
+function plusSlides(n) {slideIndex += n; showSlides();}
+function currentSlide(n) {slideIndex = n; showSlides();}
 
 // COMPTEUR
 let count = 980000000;
 const counter = document.getElementById('count');
-setInterval(() => { count += Math.floor(Math.random() * 5) + 1; counter.innerText = count.toLocaleString('fr-FR'); }, 4000);
+if(counter){
+  function updateCounter() {
+    count += Math.floor(Math.random() * 5) + 1;
+    counter.innerText = count.toLocaleString('fr-FR');
+  }
+  setInterval(updateCounter, 4000);
+}
 </script>
+
 </body>
 </html>
