@@ -114,11 +114,6 @@
         margin: 10px auto;
     }
     
-      body {
-    background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
-    min-height: 100vh;
-}
-
      body {
     background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
     color: #000; /* passe tout le texte en noir */
@@ -130,31 +125,54 @@ h1 {
 }
      
 /* BOUTONS ACHETER - VERSION PETITE ET CENTRÉE */
-.btn-money {
-    display: inline-block; /* ne prend plus 100% */
-    background: #00FF7F; /* vert fluo */
-    color: black;
-    font-weight: bold;
-    padding: 10px 20px; /* moins gros */
-    font-size: 14px; /* texte plus petit */
-    border-radius: 25px; /* arrondi */
-    text-decoration: none;
-    border: none;
-    margin: 10px auto; /* centre le bouton */
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,255,127,0.3);
-}
+    .btn-money {
+        display: inline-block;
+        background: linear-gradient(90deg, #FF8C00, #FFA500); /* orange pack */
+        color: white; /* blanc sur orange c'est mieux */
+        font-weight: bold;
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 25px;
+        border: none;
+    }
 
      /* BLOC CONTACT / BOOKING */
 .contact-box {
-    background: rgba(0, 0, 0, 0.35); /* fond noir transparent */
-    backdrop-filter: blur(10px); /* effet flou glassmorphism */
-    border-radius: 20px;
-    padding: 25px;
-    margin: 30px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* bordure blanche légère */
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%); /* Dégradé violet */
+  color: #fff;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+  border: 2px solid #C4B5FD;
 }
+
+.contact-box h2 {
+  color: #FFD700; /* Titre en or pour contraster */
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.contact-box a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-box a:hover {
+  color: #FFD700; /* Jaune au survol */
+  text-decoration: underline;
+}
+
+<div class="contact-box">
+  <h2>📞 Contact / Booking</h2>
+  <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank">+233 24 266 8880</a></p>
+  <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank">+228 96 27 58 73</a></p>
+  <p>Email: <a href="mailto:dj.damelo.music@gmail.com">dj.damelo.music@gmail.com</a></p>
+</div>
     
     .underline { 
         text-decoration: underline; 
@@ -318,13 +336,6 @@ h1 {
     <a href="https://www.linkedin.com/in/bro-elisha-768b38231" target="_blank" style="background:#0A66C2;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
     <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank" style="background:#4285F4;"><i class="fa-solid fa-location-dot"></i> Google</a>
   </div>
-
- <div class="contact-box">
-  <h2>📞 Contact / Booking</h2>
-  <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank" style="color:#fff;">+233 24 266 8880</a></p>
-  <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank" style="color:#fff;">+228 96 27 58 73</a></p>
-  <p>Email: <a href="mailto:dj.damelo.music@gmail.com" style="color:#fff;">dj.damelo.music@gmail.com</a></p>
-</div>
 
 </div> <!-- FIN CONTAINER -->
 
