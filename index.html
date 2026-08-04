@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
    <title>DJ DAMELO MUSIC</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- OG POUR PARTAGE -->
@@ -23,25 +24,75 @@
  
    <!-- TOUT LE CSS ICI -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #FF8C00 0%, #FFD700 50%, #32CD32 100%);
-      color: white;
-      text-align: center;
-      min-height: 100vh;
-    }
-   .container { position:relative; padding: 20px; max-width: 700px; margin: auto; }
-   .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; margin-bottom: 10px; }
-   .info { background: rgba(255,255,255,0.25); padding: 15px; border-radius: 15px; margin: 20px 0; font-size: 15px; font-weight: bold; }
+     .titre-noir {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: none; /* pour enlever l'ombre blanche qu'on avait mis avant */
+}
+     
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif; /* Police plus moderne */
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a0033 50%, #4C1D95 100%); /* Noir → Violet profond */
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
 
-   .share-btn {
-      position: absolute;
-      top: 15px; right: 15px;
-      background: rgba(0,0,0,0.3); color: white; border: none;
-      font-size: 28px; font-weight: bold; width: 40px; height: 40px;
-      border-radius: 50%; cursor: pointer; line-height: 1; z-index: 10;
-    }
+.container { 
+  position: relative; 
+  padding: 20px; 
+  max-width: 700px; 
+  margin: auto; 
+}
+
+.logo { 
+  width: 160px; 
+  height: 160px; 
+  border-radius: 50%; 
+  border: 4px solid #FFD700; /* Bordure or au lieu de blanc */
+  object-fit: cover; 
+  background: #000; 
+  margin-bottom: 15px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Glow or */
+}
+
+.info { 
+  background: rgba(139, 92, 246, 0.2); /* Fond violet transparent */
+  padding: 15px; 
+  border-radius: 15px; 
+  margin: 20px 0; 
+  font-size: 15px; 
+  font-weight: bold;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+}
+
+.share-btn {
+  position: absolute;
+  top: 15px; 
+  right: 15px;
+  background: rgba(255, 215, 0, 0.2); /* Fond or transparent */
+  color: #FFD700; /* Icône or */
+  border: 2px solid #FFD700;
+  font-size: 22px; 
+  font-weight: bold; 
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%; 
+  cursor: pointer; 
+  line-height: 1; 
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.share-btn:hover {
+  background: #FFD700;
+  color: #000;
+  transform: scale(1.1);
+}
 
     /* CARD PRINCIPALE */
    .card {
@@ -114,9 +165,9 @@
         margin: 10px auto;
     }
     
-     body {
-    background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
-    color: #000; /* passe tout le texte en noir */
+    body {
+    background: linear-gradient(135deg, #A8FF78 0%, #78FFD6 100%);
+    min-height: 100vh;
 }
      
 h1 {
@@ -321,7 +372,7 @@ h1 {
   </section>
 
   <!-- RESEAUX -->
-  <h2>📱 Suivez-moi partout</h2>
+<h2 class="titre-noir">📱 Suivez-moi partout</h2>
   <div class="social-grid">
     <a href="https://youtube.com/@dj-damelo?si=FNKO22RfBB6CczMn" target="_blank" style="background:#FF0000;"><i class="fa-brands fa-youtube"></i> YouTube</a>
     <a href="https://open.spotify.com/user/31gwxocjetwo6psikmpge57cmpw4" target="_blank" style="background:#1DB954;"><i class="fa-brands fa-spotify"></i> Spotify</a>
@@ -336,6 +387,13 @@ h1 {
     <a href="https://www.linkedin.com/in/bro-elisha-768b38231" target="_blank" style="background:#0A66C2;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
     <a href="https://maps.app.goo.gl/ERrLjFgSFWdrf28T8" target="_blank" style="background:#4285F4;"><i class="fa-solid fa-location-dot"></i> Google</a>
   </div>
+
+      <div class="contact-box">
+  <h2>📞 Contact / Booking</h2>
+  <p>WhatsApp 1: <a href="https://wa.me/233242668880" target="_blank" style="color:#fff;">+233 24 266 8880</a></p>
+  <p>WhatsApp 2: <a href="https://wa.me/22896275873" target="_blank" style="color:#fff;">+228 96 27 58 73</a></p>
+  <p>Email: <a href="mailto:dj.damelo.music@gmail.com" style="color:#fff;">dj.damelo.music@gmail.com</a></p>
+</div>
 
 </div> <!-- FIN CONTAINER -->
 
