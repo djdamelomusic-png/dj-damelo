@@ -23,7 +23,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
    <!-- TOUT LE CSS ICI -->
+   
   <style>
+     audio {
+  filter: hue-rotate(270deg) brightness(1.1); /* rend le lecteur violet */
+}
+     
+     /* BOUTON ACHETER HQ PLUS COURT */
+.btn-acheter {
+    background: linear-gradient(90deg, #8B5CF6 0%, #FFD700 100%);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;   /* moins haut, moins large */
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;       /* pour pouvoir centrer */
+    margin: 15px auto;    /* <-- CENTRÉ + ESPACE */
+    width: fit-content;   /* <-- S'ADAPTE AU TEXTE SEULEMENT */
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.btn-acheter:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+     
      /* POUR CENTRER LE BOUTON DANS LA CARD */
 body {
   background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%); /* Fond noir stylé */
@@ -375,16 +402,18 @@ audio {
   </div>
 </div>
 
- <!-- COMPTEUR DETACHE PLUS COMPACT -->
-<section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 20px 15px; text-align: center; margin: 20px auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px;"> <!-- J'AI AJOUTÉ max-width + margin auto -->
-  <div style="font-size: 14px; font-weight: bold; margin-bottom: 5px; color: #000;">🏆 SINGLE CERTIFIÉ 🏆</div>
-  <div id="streams-counter" style="font-size: 32px; font-weight: bold; color: #000;"> <!-- J'AI BAISSÉ à 32px -->
-    <span id="count">980,000,000</span>
+<!-- COMPTEUR DETACHE PLUS COMPACT -->
+<section style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 20px 15px; text-align: center; margin: 20px auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px; border: 2px solid #fff;">
+  
+  <div style="font-size: 14px; font-weight: bold; margin-bottom: 8px; color: #000; letter-spacing: 1px;">🏆 SINGLE CERTIFIÉ 🏆</div>
+  
+  <div id="streams-counter" style="font-size: 32px; font-weight: 900; color: #000; font-family: Arial, sans-serif;">
+    <span id="count">0</span> <!-- On commence à 0 pour l'animation -->
   </div>
-  <div style="font-size: 20px; font-weight: bold; color: #000;">STREAMS</div> <!-- J'AI BAISSÉ à 20px -->
-  <div style="font-size: 13px; margin-top: 5px; color: #333;">GOLD & PLATINUM</div>
+  
+  <div style="font-size: 20px; font-weight: bold; color: #000; margin-top: -5px;">STREAMS</div>
+  <div style="font-size: 13px; margin-top: 5px; color: #333; font-weight: 600;">GOLD & PLATINUM</div>
 </section>
-
   <h2>🎵 Mes Derniers Sons</h2>
   <h4>Écoutez les sons gratuitement. Payez pour les télécharger <h/>
      <h3>🔥 Site Officiel 🔥 </h3>
@@ -397,8 +426,9 @@ audio {
       <source src="riche-ou-pauvre.mp3" type="audio/mpeg">
       Votre navigateur ne supporte pas l'audio.
     </audio>
-    <button onclick="afficherPaiement('riche')" class="btn-money">Acheter et Télécharger HQ</button>
-    
+     <a href="#" onclick="afficherPaiement('riche')" class="btn-acheter">
+    Acheter et Télécharger HQ
+</a>
     <div id="paiement-riche" class="paiement" style="display:none;"> <!-- CACHÉ AU DÉPART -->
       <h4>Comment payer :</h4>
       <p>1. <b>Moov Money Marchand</b> : <b>*155*2*2*120 500*120 500*2000#</b></p>
@@ -416,7 +446,9 @@ audio {
       <source src="petit-damelo.mp3" type="audio/mpeg">
       Votre navigateur ne supporte pas l'audio.
     </audio>
-    <button onclick="afficherPaiement('petit')" class="btn-money">Acheter et Télécharger HQ</button>
+   <a href="#" onclick="afficherPaiement('petit')" class="btn-acheter">
+    Acheter et Télécharger HQ
+</a>
     
     <div id="paiement-petit" class="paiement" style="display:none;"> <!-- CACHÉ AU DÉPART -->
       <h4>Comment payer :</h4>
@@ -432,7 +464,9 @@ audio {
     <h4>🎁 PACK DES 2 SONS</h4>
     <p style="text-decoration:line-through; color:#aaa; font-size:14px;">4000 FCFA</p>
     <p class="prix">3000 FCFA <span style="font-size:12px; color:#00ff7f;">-1000 FCFA</span></p>
-    <button onclick="afficherPaiement('pack')" class="btn-money">🔥 Acheter le Pack à 3000 FCFA</button>
+   <a href="#" onclick="afficherPaiement('pack')" class="btn-acheter">
+    Acheter et Télécharger HQ
+</a>
     
     <div id="paiement-pack" class="paiement" style="display:none;"> <!-- CACHÉ AU DÉPART -->
       <h4>Comment payer le Pack :</h4>
@@ -643,6 +677,32 @@ function afficherPaiement(id) {
 function envoyerWhatsApp(nomSon, prix) {
   let message = `Bonjour DJ DAMELO, j'ai payé ${prix} FCFA pour "${nomSon}". Voici ma capture :`;
   window.open(`https://wa.me/22870100603?text=${encodeURIComponent(message)}`);
+}
+
+     // STOPPER LES AUTRES AUDIOS QUAND ON EN LANCE UN
+const audios = document.querySelectorAll('audio');
+audios.forEach(audio => {
+  audio.addEventListener('play', () => {
+    audios.forEach(otherAudio => {
+      if (otherAudio !== audio) {
+        otherAudio.pause();
+        otherAudio.currentTime = 0;
+      }
+    });
+  });
+});
+
+// FONCTION POUR AFFICHER LE PAIEMENT
+function afficherPaiement(id) {
+  // Ferme tous les autres paiements d'abord
+  document.querySelectorAll('.paiement').forEach(p => p.style.display = 'none');
+  // Ouvre seulement celui qu'on a cliqué
+  document.getElementById('paiement-' + id).style.display = 'block';
+}
+
+function envoyerWhatsApp(nomSon, prix) {
+  let message = `Bonjour DJ DAMELO, j'ai payé ${prix} FCFA pour "${nomSon}". Voici ma capture :`;
+  window.open(`https://wa.me/22870100603?text=${encodeURIComponent(message)}`, '_blank');
 }
      
 </script>
