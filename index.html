@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <style>
-    .card { background:#111; padding:20px; border:2px solid #ffc107; border-radius:12px; margin:20px auto; max-width:500px; }
-.prix { color:#00ff00; font-size:18px; font-weight:bold; margin:5px 0; }
-.btn-money { background:#00ff00; color:#000; padding:12px; border:none; border-radius:8px; font-weight:bold; width:100%; cursor:pointer; font-size:15px; }
-.btn-whatsapp { background:#25D366; color:#fff; padding:12px; border:none; border-radius:8px; font-weight:bold; width:100%; cursor:pointer; margin-top:10px; }
-.paiement { background:#0a0a0a; padding:12px; border-radius:8px; border:1px dashed #ffc107; margin-top:12px; text-align:left; font-size:14px; }
-
-/* AJOUTE ÇA POUR LE PACK */
-.badge-pack { background: #FF8C00; color: white; font-size: 12px; padding: 3px 8px; border-radius: 10px; margin-left: 8px; }
-.btn-pack { background: #FFD700; color: #000; padding: 12px; border: 2px solid #FF8C00; border-radius: 8px; font-weight: bold; width: 100%; cursor: pointer; font-size: 15px; }
-.separateur { border: none; border-top: 1px dashed #ffc107; margin: 15px 0; }
-    .card { background:#111; padding:20px; border:2px solid #ffc107; border-radius:12px; margin:20px auto; max-width:500px; }
-.prix { color:#00ff00; font-size:18px; font-weight:bold; margin:5px 0; }
-.btn-money { background:#00ff00; color:#000; padding:12px; border:none; border-radius:8px; font-weight:bold; width:100%; cursor:pointer; font-size:15px; }
-.btn-whatsapp { background:#25D366; color:#fff; padding:12px; border:none; border-radius:8px; font-weight:bold; width:100%; cursor:pointer; margin-top:10px; }
-.paiement { background:#0a0a0a; padding:12px; border-radius:8px; border:1px dashed #ffc107; margin-top:12px; text-align:left; font-size:14px; }
-  </style>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6GBX85QCX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E6GBX85QCX');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:image" content="https://tonsite.com/images/pochette.jpg">
-<meta property="og:title" content="DJ DAMELO - RICHE OU PAUVRE">
   <title>DJ DAMELO MUSIC</title>
+  
+  <!-- OG POUR PARTAGE -->
+  <meta property="og:image" content="https://tonsite.com/images/pochette.jpg">
+  <meta property="og:title" content="DJ DAMELO - RICHE OU PAUVRE">
+  <meta property="og:description" content="Écoute et achète mes sons avec Moov Money et Tmoney">
+
+  <!-- ICONES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6GBX85QCX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E6GBX85QCX');
+  </script>
+
+  <!-- TOUT LE CSS ICI -->
+  <style>
     body { 
       margin: 0; 
       font-family: Arial, sans-serif; 
@@ -44,19 +35,69 @@
     .container { padding: 20px; max-width: 700px; margin: auto; }
     .logo { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; object-fit: cover; background: white; margin-bottom: 10px; }
     .info { background: rgba(255,255,255,0.25); padding: 15px; border-radius: 15px; margin: 20px 0; font-size: 15px; font-weight: bold; }
-    .card { background: rgba(255,255,255,0.95); color: black; padding: 20px; border-radius: 20px; margin: 20px 0; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+    
+    /* CARD PRINCIPALE */
+    .card { 
+      background: rgba(255,255,255,0.95); 
+      color: black; 
+      padding: 20px; 
+      border-radius: 20px; 
+      margin: 20px 0; 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
     audio { width: 100%; margin: 10px 0; border-radius: 10px; }
-    .btn-money { background: linear-gradient(90deg, #00ff88, #00cc66); border: none; padding: 15px; width: 100%; border-radius: 50px; font-size: 17px; font-weight: bold; color: black; cursor: pointer; margin-top: 10px; }
-    .btn-whatsapp { background: #25D366; border: none; padding: 12px; width: 100%; border-radius: 50px; font-size: 15px; font-weight: bold; color: white; cursor: pointer; margin-top: 8px; }
-    .paiement { background: #f9f9f9; color: black; padding: 15px; border-radius: 10px; text-align: left; margin-top: 15px; display: none; }
-    .prix { font-size: 22px; font-weight: bold; color: #FF8C00; }
-    h2 { color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+    
+    .prix { font-size: 22px; font-weight: bold; color: #FF8C00; margin: 5px 0; }
+    
+    .btn-money { 
+      background: linear-gradient(90deg, #00ff88, #00cc66); 
+      border: none; 
+      padding: 15px; 
+      width: 100%; 
+      border-radius: 50px; 
+      font-size: 17px; 
+      font-weight: bold; 
+      color: black; 
+      cursor: pointer; 
+      margin-top: 10px; 
+    }
+    
+    .btn-whatsapp { 
+      background: #25D366; 
+      border: none; 
+      padding: 12px; 
+      width: 100%; 
+      border-radius: 50px; 
+      font-size: 15px; 
+      font-weight: bold; 
+      color: white; 
+      cursor: pointer; 
+      margin-top: 8px; 
+    }
+    
+    .paiement { 
+      background: #f9f9f9; 
+      color: black; 
+      padding: 15px; 
+      border-radius: 10px; 
+      text-align: left; 
+      margin-top: 15px; 
+      display: none;
+      border: 1px dashed #FF8C00;
+    }
+    
+    h2, h3, h4 { color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+    .card h3, .card h4 { color: #000; text-shadow: none; }
     b { color: #FF8C00; }
+    
     .contact { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; margin-top: 30px; }
   </style>
 </head>
+<body>
+<div class="container">
   
-  <body>
     <button class="share-btn" onclick="shareSite()">⋯</button>
 
 <script>
